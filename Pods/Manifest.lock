@@ -1,0 +1,28 @@
+PODS:
+  - FSCalendar (2.8.4)
+  - PromiseKit (8.1.1):
+    - PromiseKit/CorePromise (= 8.1.1)
+    - PromiseKit/Foundation (= 8.1.1)
+    - PromiseKit/UIKit (= 8.1.1)
+  - PromiseKit/CorePromise (8.1.1)
+  - PromiseKit/Foundation (8.1.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (8.1.1):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - FSCalendar
+  - PromiseKit (~> 8)
+
+SPEC REPOS:
+  trunk:
+    - FSCalendar
+    - PromiseKit
+
+SPEC CHECKSUMS:
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  PromiseKit: d1be44b474e5acfa16adf007a1f49f104e10fead
+
+PODFILE CHECKSUM: 462c69284cd337ad6f471667fde380cf737cb53c
+
+COCOAPODS: 1.14.3
