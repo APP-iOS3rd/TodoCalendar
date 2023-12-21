@@ -95,11 +95,11 @@
 		01D7AD8B2B319E1E0097410D /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		01D7AD8D2B31A0D10097410D /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		01D7AD982B33025B0097410D /* CalendarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModule.swift; sourceTree = "<group>"; };
-		01D7AD9C2B3315BA0097410D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		525FE0332B33BF1600391E31 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 		525FE0352B33CA4700391E31 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		525FE0372B33D64900391E31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		5AEDABBB2B33BF5300FD8598 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		843E9546D0EFF3BE40E24F03 /* Pods-TimeBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.debug.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA4F12F944747D64AD20E84 /* Pods-TimeBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.release.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,7 +119,7 @@
 		019CA2CD2AF4BF89004598D9 = {
 			isa = PBXGroup;
 			children = (
-				01D7AD9C2B3315BA0097410D /* .gitignore */,
+				5AEDABBB2B33BF5300FD8598 /* .gitignore */,
 				016AD8152AFD1197006A98B9 /* README.md */,
 				019CA2D82AF4BF89004598D9 /* TimeBlock */,
 				019CA2D72AF4BF89004598D9 /* Products */,
@@ -354,7 +354,6 @@
 				01D7AD1A2B2C94BE0097410D /* Pretendard-Black.otf in Resources */,
 				01D7AD1E2B2C94BE0097410D /* Pretendard-Bold.otf in Resources */,
 				01D7AD1B2B2C94BE0097410D /* Pretendard-Medium.otf in Resources */,
-				01D7AD9D2B3315BA0097410D /* .gitignore in Resources */,
 				01D7AD202B2C94BE0097410D /* Pretendard-ExtraLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
