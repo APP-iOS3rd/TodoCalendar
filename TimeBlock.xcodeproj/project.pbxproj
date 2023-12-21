@@ -281,9 +281,9 @@
 		5AEDABE02B340CBA00FD8598 /* AddToDoView */ = {
 			isa = PBXGroup;
 			children = (
+				5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */,
 				5AEDABE12B340CBA00FD8598 /* SampleCategoryModel.swift */,
 				5AEDABE22B340CBA00FD8598 /* SelectCategoryBtn */,
-				5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */,
 			);
 			path = AddToDoView;
 			sourceTree = "<group>";

@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct SelectCategoryBtn: View {
-    @Binding var category: SampleCategoryModel
-    @State var isShownSheet = false
     var categories: [SampleCategoryModel]
+    @State var selectedCategory: SampleCategoryModel
+    @State var isShownSheet = false
+        
+    init(categories: [SampleCategoryModel]) {
+        self.categories = categories
+        self.selectedCategory = categories.first ?? SampleCategoryModel()
+    }
     
     var width: CGFloat = 60
     var height: CGFloat = 26
@@ -19,21 +24,21 @@ struct SelectCategoryBtn: View {
         Button {
             self.isShownSheet.toggle()
         } label: {
-            Text(category.name)
+            Text(selectedCategory.name)
                 .foregroundColor(.white)
         }
         .sheet(isPresented: $isShownSheet) {
-            SelectCategorySheetView(categories: self.categories)
+            SelectCategorySheetView(categories: categories, selectedCategory: self.$selectedCategory)
                 .presentationDetents([.fraction(0.4)])
         }
         .frame(width: self.width, height: self.height, alignment: .center)
-        .background(category.color)
+        .background(selectedCategory.color)
         .cornerRadius(25)
     }
 }
 
 #Preview {
-    SelectCategoryBtn(category: .constant(SampleCategoryModel()), categories: [
+    SelectCategoryBtn(categories: [
         SampleCategoryModel(name: "할일1", color: .red),
         SampleCategoryModel(name: "할일2", color: .blue),
         SampleCategoryModel(name: "할일3", color: .green),

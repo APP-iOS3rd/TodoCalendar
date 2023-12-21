@@ -9,19 +9,20 @@ import SwiftUI
 
 struct SelectCategorySheetView: View {
     var categories: [SampleCategoryModel]
-    @State var selectedCategory: SampleCategoryModel?
+    @Binding var selectedCategory: SampleCategoryModel
     
     var body: some View {
-        ScrollView(.vertical) {
+        List {
             ForEach(categories, id: \.self) { category in
                 SelectCategorySheetCell(category: category)
                     .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
                     .onTapGesture {
-                        selectedCategory = category
+                        self.selectedCategory = category
                     }
             }
         }
+        .listStyle(.plain)
     }
 }
 
@@ -33,6 +34,6 @@ struct SelectCategorySheetView: View {
             SampleCategoryModel(name: "할일3", color: .green),
             SampleCategoryModel(name: "할일4", color: .purple),
             SampleCategoryModel(name: "할일5", color: .pink),
-        ]
+        ], selectedCategory: .constant(SampleCategoryModel())
     )
 }
