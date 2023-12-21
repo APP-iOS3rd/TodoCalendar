@@ -40,6 +40,10 @@
 		01D7AD912B32FE1C0097410D /* Pods_TimeBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; };
 		01D7AD922B32FE1C0097410D /* Pods_TimeBlock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD982B33025B0097410D /* CalendarModule.swift */; };
+		01D7AD9D2B3315BA0097410D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 01D7AD9C2B3315BA0097410D /* .gitignore */; };
+		525FE0342B33BF1600391E31 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0332B33BF1600391E31 /* TodoData.swift */; };
+		525FE0362B33CA4700391E31 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0352B33CA4700391E31 /* Task.swift */; };
+		525FE0382B33D64900391E31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0372B33D64900391E31 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -92,6 +96,9 @@
 		01D7AD8D2B31A0D10097410D /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		01D7AD982B33025B0097410D /* CalendarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModule.swift; sourceTree = "<group>"; };
 		22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		525FE0332B33BF1600391E31 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
+		525FE0352B33CA4700391E31 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		525FE0372B33D64900391E31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5AEDABBB2B33BF5300FD8598 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		843E9546D0EFF3BE40E24F03 /* Pods-TimeBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.debug.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA4F12F944747D64AD20E84 /* Pods-TimeBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.release.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +163,7 @@
 		01CACF8A2B0B61E3008EBC42 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				529A3CED2B33DEF200875ED4 /* TodoModels */,
 				01D7AD782B2FCF1A0097410D /* HowToUse.swift */,
 				01D7AD402B2FC98F0097410D /* ToDo.swift */,
 				01D7AD892B319D550097410D /* Tag.swift */,
@@ -246,6 +254,16 @@
 				01D7AD982B33025B0097410D /* CalendarModule.swift */,
 			);
 			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		529A3CED2B33DEF200875ED4 /* TodoModels */ = {
+			isa = PBXGroup;
+			children = (
+				525FE0332B33BF1600391E31 /* TodoData.swift */,
+				525FE0352B33CA4700391E31 /* Task.swift */,
+				525FE0372B33D64900391E31 /* Category.swift */,
+			);
+			path = TodoModels;
 			sourceTree = "<group>";
 		};
 		76E276DD76FA62C0A586769F /* Pods */ = {
@@ -393,7 +411,9 @@
 				01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */,
 				01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */,
 				016AD8142AFCD942006A98B9 /* CalendarView.swift in Sources */,
+				525FE0362B33CA4700391E31 /* Task.swift in Sources */,
 				01CACF452B08F40C008EBC42 /* ToDoDetailView.swift in Sources */,
+				525FE0342B33BF1600391E31 /* TodoData.swift in Sources */,
 				01D7AD872B31872C0097410D /* View+Extensions.swift in Sources */,
 				01D7AD8A2B319D550097410D /* Tag.swift in Sources */,
 				01D7AD8C2B319E1E0097410D /* RGBColor.swift in Sources */,
@@ -401,6 +421,7 @@
 				01CACF042B04DCD9008EBC42 /* OnboardingView.swift in Sources */,
 				01D7AD322B2EF4080097410D /* HowToUseViewModel.swift in Sources */,
 				01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */,
+				525FE0382B33D64900391E31 /* Category.swift in Sources */,
 				01D7AD412B2FC98F0097410D /* ToDo.swift in Sources */,
 				01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */,
 				019CA2DA2AF4BF89004598D9 /* TimeBlockApp.swift in Sources */,
