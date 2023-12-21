@@ -48,7 +48,6 @@
 		5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */; };
 		5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */; };
 		5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */; };
-		5AEDABF02B340CBA00FD8598 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE92B340CBA00FD8598 /* ColorExtension.swift */; };
 		5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +110,6 @@
 		5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetCellCircle.swift; sourceTree = "<group>"; };
 		5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetCell.swift; sourceTree = "<group>"; };
 		5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryBtn.swift; sourceTree = "<group>"; };
-		5AEDABE92B340CBA00FD8598 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		843E9546D0EFF3BE40E24F03 /* Pods-TimeBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.debug.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA4F12F944747D64AD20E84 /* Pods-TimeBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.release.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.release.xcconfig"; sourceTree = "<group>"; };
@@ -285,7 +283,6 @@
 			children = (
 				5AEDABE12B340CBA00FD8598 /* SampleCategoryModel.swift */,
 				5AEDABE22B340CBA00FD8598 /* SelectCategoryBtn */,
-				5AEDABE92B340CBA00FD8598 /* ColorExtension.swift */,
 				5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */,
 			);
 			path = AddToDoView;
@@ -294,8 +291,8 @@
 		5AEDABE22B340CBA00FD8598 /* SelectCategoryBtn */ = {
 			isa = PBXGroup;
 			children = (
-				5AEDABE32B340CBA00FD8598 /* SelectCategorySheetView */,
 				5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */,
+				5AEDABE32B340CBA00FD8598 /* SelectCategorySheetView */,
 			);
 			path = SelectCategoryBtn;
 			sourceTree = "<group>";
@@ -470,7 +467,6 @@
 				01D7AD872B31872C0097410D /* View+Extensions.swift in Sources */,
 				01D7AD8A2B319D550097410D /* Tag.swift in Sources */,
 				01D7AD8C2B319E1E0097410D /* RGBColor.swift in Sources */,
-				5AEDABF02B340CBA00FD8598 /* ColorExtension.swift in Sources */,
 				01D7AD3B2B2F0BEB0097410D /* MainView.swift in Sources */,
 				01CACF042B04DCD9008EBC42 /* OnboardingView.swift in Sources */,
 				5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */,
