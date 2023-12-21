@@ -49,6 +49,8 @@
 		5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */; };
 		5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */; };
 		5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */; };
+		5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */; };
+		5AEDABF52B3426BC00FD8598 /* SelectCategorySheetCellCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABF42B3426BC00FD8598 /* SelectCategorySheetCellCheck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +113,8 @@
 		5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetCell.swift; sourceTree = "<group>"; };
 		5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryBtn.swift; sourceTree = "<group>"; };
 		5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoTextField.swift; sourceTree = "<group>"; };
+		5AEDABF42B3426BC00FD8598 /* SelectCategorySheetCellCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetCellCheck.swift; sourceTree = "<group>"; };
 		843E9546D0EFF3BE40E24F03 /* Pods-TimeBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.debug.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA4F12F944747D64AD20E84 /* Pods-TimeBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.release.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,6 +287,7 @@
 			children = (
 				5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */,
 				5AEDABE12B340CBA00FD8598 /* SampleCategoryModel.swift */,
+				5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */,
 				5AEDABE22B340CBA00FD8598 /* SelectCategoryBtn */,
 			);
 			path = AddToDoView;
@@ -309,8 +314,9 @@
 		5AEDABE52B340CBA00FD8598 /* SelectCategorySheetCell */ = {
 			isa = PBXGroup;
 			children = (
-				5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */,
 				5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */,
+				5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */,
+				5AEDABF42B3426BC00FD8598 /* SelectCategorySheetCellCheck.swift */,
 			);
 			path = SelectCategorySheetCell;
 			sourceTree = "<group>";
@@ -459,6 +465,7 @@
 				01D7AD352B2F01D40097410D /* TabBarView.swift in Sources */,
 				01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */,
 				01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */,
+				5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */,
 				016AD8142AFCD942006A98B9 /* CalendarView.swift in Sources */,
 				525FE0362B33CA4700391E31 /* Task.swift in Sources */,
 				5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */,
@@ -474,6 +481,7 @@
 				5AEDABEB2B340CBA00FD8598 /* SampleCategoryModel.swift in Sources */,
 				01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */,
 				525FE0382B33D64900391E31 /* Category.swift in Sources */,
+				5AEDABF52B3426BC00FD8598 /* SelectCategorySheetCellCheck.swift in Sources */,
 				01D7AD412B2FC98F0097410D /* ToDo.swift in Sources */,
 				01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */,
 				019CA2DA2AF4BF89004598D9 /* TimeBlockApp.swift in Sources */,

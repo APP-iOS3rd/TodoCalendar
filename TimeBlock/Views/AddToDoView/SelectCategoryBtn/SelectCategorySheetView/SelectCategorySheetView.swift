@@ -14,7 +14,7 @@ struct SelectCategorySheetView: View {
     var body: some View {
         List {
             ForEach(categories, id: \.self) { category in
-                SelectCategorySheetCell(category: category)
+                SelectCategorySheetCell(selecteCategory: $selectedCategory, category: category)
                     .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
                     .onTapGesture {

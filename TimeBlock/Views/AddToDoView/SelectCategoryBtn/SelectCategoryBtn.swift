@@ -9,14 +9,9 @@ import SwiftUI
 
 struct SelectCategoryBtn: View {
     var categories: [SampleCategoryModel]
-    @State var selectedCategory: SampleCategoryModel
+    @Binding var selectedCategory: SampleCategoryModel
     @State var isShownSheet = false
-        
-    init(categories: [SampleCategoryModel]) {
-        self.categories = categories
-        self.selectedCategory = categories.first ?? SampleCategoryModel()
-    }
-    
+                
     var width: CGFloat = 60
     var height: CGFloat = 26
     
@@ -44,5 +39,8 @@ struct SelectCategoryBtn: View {
         SampleCategoryModel(name: "할일3", color: .green),
         SampleCategoryModel(name: "할일4", color: .purple),
         SampleCategoryModel(name: "할일5", color: .pink),
-    ])
+    ], 
+                      
+    selectedCategory: .constant(SampleCategoryModel(name: "할일1", color: .red))
+    )
 }

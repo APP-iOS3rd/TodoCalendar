@@ -13,21 +13,23 @@ struct SelectCategorySheetCell: View {
     private let RADIUS: CGFloat = 11
     private let BACKGROUND_COLOR: Color = .white
     
+    @Binding var selecteCategory: SampleCategoryModel
     var category: SampleCategoryModel
             
     var body: some View {
-        Button {
-            
-        } label: {
-            HStack() {
+        HStack() {
+            if selecteCategory == category {
+                SelectCategorySheetCellCheck(color: category.color)
+            } else {
                 SelectCategorySheetCellCircle(color: category.color)
-                Text(category.name)
-                    .font(Font.system(size: FONT_SIZE, weight: .bold))
-                    .foregroundStyle(.black)
-                Spacer()
             }
-            .padding()
+                        
+            Text(category.name)
+                .font(Font.system(size: FONT_SIZE, weight: .bold))
+                .foregroundStyle(.black)
+            Spacer()
         }
+        .padding()
         .frame(minWidth: 0, maxWidth: .infinity)
         .frame(height: HEIGHT)
         .background(BACKGROUND_COLOR)
@@ -37,5 +39,8 @@ struct SelectCategorySheetCell: View {
 }
 
 #Preview {
-    SelectCategorySheetCell(category: SampleCategoryModel())
+    SelectCategorySheetCell(
+        selecteCategory: .constant(SampleCategoryModel(name: "할일1", color: .red)),
+        category: SampleCategoryModel(name: "할일1", color: .red)
+    )
 }
