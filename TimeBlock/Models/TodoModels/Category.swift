@@ -12,10 +12,13 @@ import SwiftUI
 @Model
 final class Category: Identifiable {
     var name: String
-    var color: Color
+    // var color: Color
     
-    init(name: String, color: Color) {
+    init(name: String) {
         self.name = name
-        self.color = color
     }
+//    init(name: String, color: Color) {
+//        self.name = name
+//        self.color = color
+//    }
 }
