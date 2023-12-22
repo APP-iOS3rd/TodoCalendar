@@ -6,24 +6,22 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AddTodoView: View {
-    var categories: [SampleCategoryModel]
-    @State var selectedCategory: SampleCategoryModel
+    let PADDING: CGFloat = 20
+    
+    @Query var categories: [Category]
+    @State var selectedCategory: Category = Category()
     @State var content = ""
-    
-    init(categories: [SampleCategoryModel]) {
-        self.categories = categories
-        self.selectedCategory = categories.first ?? SampleCategoryModel()
-    }
-    
+            
     var body: some View {
         VStack {
             HStack {
-                SelectCategoryBtn(categories: self.categories, selectedCategory: $selectedCategory)
+                SelectCategoryBtn(selectedCategory: $selectedCategory, categories: self.categories)
                 Spacer()
             }
-            .padding(.bottom, 20)
+            .padding(.bottom, PADDING)
                                     
             AddToDoTextField(content: $content)
         }
@@ -32,11 +30,16 @@ struct AddTodoView: View {
 }
 
 #Preview {
-    AddTodoView(categories: [
-        SampleCategoryModel(name: "할일1", color: .red),
-        SampleCategoryModel(name: "할일2", color: .blue),
-        SampleCategoryModel(name: "할일3", color: .green),
-        SampleCategoryModel(name: "할일4", color: .purple),
-        SampleCategoryModel(name: "할일5", color: .pink),
-    ])
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Category.self, configurations: config)
+        
+    container.mainContext.insert(Category(name: "할일1", color: "ff7373"))
+    container.mainContext.insert(Category(name: "할일2", color: "a2a2d0"))
+    container.mainContext.insert(Category(name: "할일3", color: "f5cc7f"))
+    container.mainContext.insert(Category(name: "긴 카테고리 글자에요~~~~", color: "ff7373"))
+    container.mainContext.insert(Category(name: "할일5", color: "dfc9f1"))
+    
+    return AddTodoView()
+        .modelContainer(container)
 }
+

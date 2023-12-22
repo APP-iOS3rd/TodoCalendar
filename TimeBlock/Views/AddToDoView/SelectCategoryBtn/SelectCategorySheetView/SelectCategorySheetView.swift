@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct SelectCategorySheetView: View {
-    var categories: [SampleCategoryModel]
-    @Binding var selectedCategory: SampleCategoryModel
+    var categories: [Category]
+    @Binding var selectedCategory: Category
     
     var body: some View {
         List {
             ForEach(categories, id: \.self) { category in
-                SelectCategorySheetCell(selecteCategory: $selectedCategory, category: category)
+                SelectCategorySheetCell(selectedCategory: $selectedCategory, category: category)
                     .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
                     .onTapGesture {
@@ -26,14 +26,15 @@ struct SelectCategorySheetView: View {
     }
 }
 
-#Preview {
-    SelectCategorySheetView(categories:
-        [
-            SampleCategoryModel(name: "할일1", color: .red),
-            SampleCategoryModel(name: "할일2", color: .blue),
-            SampleCategoryModel(name: "할일3", color: .green),
-            SampleCategoryModel(name: "할일4", color: .purple),
-            SampleCategoryModel(name: "할일5", color: .pink),
-        ], selectedCategory: .constant(SampleCategoryModel())
-    )
-}
+//#Preview {
+//    SelectCategorySheetView(categories: [
+//        Category(name: "할일1", color: "ff7373"),
+//        Category(name: "할일2", color: "a2a2d0"),
+//        Category(name: "할일3", color: "f5cc7f"),
+//        Category(name: "할일4", color: "88bf8d"),
+//        Category(name: "할일5", color: "dfc9f1"),
+//    ],
+//    
+//    selectedCategory: .constant(Category(name: "할일", color: "ff7373"))
+//    )
+//}

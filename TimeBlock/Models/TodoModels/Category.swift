@@ -7,18 +7,16 @@
 
 import Foundation
 import SwiftData
-import SwiftUI
 
 @Model
 final class Category: Identifiable {
+    @Attribute(.unique) var id: UUID
     var name: String
-    // var color: Color
+    var color: String
     
-    init(name: String) {
+    init(id: UUID = UUID(), name: String = "카테고리 선택", color: String = "a2a2d0") {
+        self.id = id
         self.name = name
+        self.color = color
     }
-//    init(name: String, color: Color) {
-//        self.name = name
-//        self.color = color
-//    }
 }

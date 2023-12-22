@@ -8,39 +8,45 @@
 import SwiftUI
 
 struct SelectCategoryBtn: View {
-    var categories: [SampleCategoryModel]
-    @Binding var selectedCategory: SampleCategoryModel
-    @State var isShownSheet = false
-                
-    var width: CGFloat = 60
-    var height: CGFloat = 26
+    let HEIGHT: CGFloat = 26
+    let RADIUS: CGFloat = 25
+    let SACALE_FACTOR: CGFloat = 0.5
+    let TEXT_PADDING: CGFloat = 10
+    let SHEET_HEIGHT_RATIO: Double = 0.4
     
+    
+    @Binding var selectedCategory: Category
+    @State var isShownSheet = false
+    var categories: [Category]
+                                
     var body: some View {
         Button {
             self.isShownSheet.toggle()
         } label: {
             Text(selectedCategory.name)
                 .foregroundColor(.white)
+                .minimumScaleFactor(SACALE_FACTOR)
+                .padding(.horizontal, TEXT_PADDING)
         }
         .sheet(isPresented: $isShownSheet) {
             SelectCategorySheetView(categories: categories, selectedCategory: self.$selectedCategory)
-                .presentationDetents([.fraction(0.4)])
+                .presentationDetents([.fraction(SHEET_HEIGHT_RATIO)])
         }
-        .frame(width: self.width, height: self.height, alignment: .center)
-        .background(selectedCategory.color)
-        .cornerRadius(25)
+        .frame(height: HEIGHT, alignment: .center)
+        .background(Color(hex: selectedCategory.color))
+        .cornerRadius(RADIUS)
     }
 }
 
-#Preview {
-    SelectCategoryBtn(categories: [
-        SampleCategoryModel(name: "할일1", color: .red),
-        SampleCategoryModel(name: "할일2", color: .blue),
-        SampleCategoryModel(name: "할일3", color: .green),
-        SampleCategoryModel(name: "할일4", color: .purple),
-        SampleCategoryModel(name: "할일5", color: .pink),
-    ], 
-                      
-    selectedCategory: .constant(SampleCategoryModel(name: "할일1", color: .red))
-    )
-}
+//#Preview {
+//    SelectCategoryBtn(categories: [
+//        Category(name: "할일1", color: "ff7373"),
+//        Category(name: "할일2", color: "a2a2d0"),
+//        Category(name: "할일3", color: "f5cc7f"),
+//        Category(name: "할일4", color: "88bf8d"),
+//        Category(name: "할일5", color: "dfc9f1"),
+//    ],
+//                      
+//    selectedCategory: .constant(Category(name: "할일1", color: "ff7373"))
+//    )
+//}
