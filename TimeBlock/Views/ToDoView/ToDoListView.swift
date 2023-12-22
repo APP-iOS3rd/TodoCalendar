@@ -154,3 +154,7 @@ extension ToDoListView{
         }
     }
 }
+
+#Preview{
+    ToDoListView()
+}
