@@ -15,6 +15,7 @@ struct CalendarView2:View {
     @Environment(\.modelContext) var context
     @Environment(\.dismiss) private var dismiss
     @State private var isModalPresented = false
+    @StateObject var calendarModule = CalendarModule()
     
     var body: some View {
         
@@ -42,6 +43,7 @@ struct CalendarView2:View {
                 .padding(.trailing)
                 .sheet(isPresented: $isModalPresented) {
                             AddTodoView()
+                          
                         }
                 
                 
@@ -50,6 +52,7 @@ struct CalendarView2:View {
                     CalendarModuleView()
                     Spacer()
                 }
+                
                 VStack {
                     Spacer()
                     Text("Details")
@@ -58,6 +61,7 @@ struct CalendarView2:View {
                 Spacer()
                 
             }
+            .environmentObject(calendarModule)
         }
         
     }

@@ -11,11 +11,11 @@ import SwiftData
 struct AddTodoView: View {
     let PADDING: CGFloat = 20
     
-    @Query var categories: [Category]
+    @Query(sort: \Category.name) var categories: [Category]
     @State var selectedCategory: Category = Category()
     @State var content = ""
     
-    @StateObject var calendarModule = CalendarModule()
+    @EnvironmentObject var calendarModule: CalendarModule
     
     var body: some View {
         VStack {
@@ -25,15 +25,15 @@ struct AddTodoView: View {
             }
             .padding(.bottom, PADDING)
             AddToDoTextField(content: $content)
-            if let date = calendarModule.selectedDate {
-                Text("선택된 날짜: \(date.dateToString)")
-                    .padding()
-            } else {
-                Text("아직 날짜를 선택하지 않았습니다.")
-                    .padding()
+            
+            HStack{
+                Text("\(calendarModule.selectedDate.dateToString)")
+                    .font(.bold18)
+                Spacer()
             }
         }
-        .padding()
+        .padding(10)
+        
     }
 }
 
@@ -46,7 +46,7 @@ struct AddTodoView: View {
     container.mainContext.insert(Category(name: "할일3", color: "f5cc7f"))
     container.mainContext.insert(Category(name: "긴 카테고리 글자에요~~~~", color: "ff7373"))
     container.mainContext.insert(Category(name: "할일5", color: "dfc9f1"))
-
+    
     return AddTodoView()
         .modelContainer(container)
 }
