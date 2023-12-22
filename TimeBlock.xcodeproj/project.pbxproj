@@ -40,6 +40,8 @@
 		01D7AD912B32FE1C0097410D /* Pods_TimeBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; };
 		01D7AD922B32FE1C0097410D /* Pods_TimeBlock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD982B33025B0097410D /* CalendarModule.swift */; };
+		1D22BFD12B35839300E6A1AE /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D22BFCE2B35839300E6A1AE /* CategoryView.swift */; };
+		1D22BFD32B35839300E6A1AE /* CategoryDetailVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D22BFD02B35839300E6A1AE /* CategoryDetailVIew.swift */; };
 		525FE0342B33BF1600391E31 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0332B33BF1600391E31 /* TodoData.swift */; };
 		525FE0362B33CA4700391E31 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0352B33CA4700391E31 /* Task.swift */; };
 		525FE0382B33D64900391E31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0372B33D64900391E31 /* Category.swift */; };
@@ -100,6 +102,8 @@
 		01D7AD8B2B319E1E0097410D /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		01D7AD8D2B31A0D10097410D /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		01D7AD982B33025B0097410D /* CalendarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModule.swift; sourceTree = "<group>"; };
+		1D22BFCE2B35839300E6A1AE /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		1D22BFD02B35839300E6A1AE /* CategoryDetailVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailVIew.swift; sourceTree = "<group>"; };
 		22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		525FE0332B33BF1600391E31 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 		525FE0352B33CA4700391E31 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		01D7AD0B2B2C93270097410D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1D22BFCD2B35839300E6A1AE /* CategoryView */,
 				5AEDABE02B340CBA00FD8598 /* AddToDoView */,
 				01D7AD842B3180360097410D /* CalendarView */,
 				01D7AD332B2F01670097410D /* ToDoView */,
@@ -266,6 +271,15 @@
 				01D7AD982B33025B0097410D /* CalendarModule.swift */,
 			);
 			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		1D22BFCD2B35839300E6A1AE /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				1D22BFCE2B35839300E6A1AE /* CategoryView.swift */,
+				1D22BFD02B35839300E6A1AE /* CategoryDetailVIew.swift */,
+			);
+			path = CategoryView;
 			sourceTree = "<group>";
 		};
 		529A3CED2B33DEF200875ED4 /* TodoModels */ = {
@@ -470,6 +484,7 @@
 				01D7AD8C2B319E1E0097410D /* RGBColor.swift in Sources */,
 				01D7AD3B2B2F0BEB0097410D /* MainView.swift in Sources */,
 				01CACF042B04DCD9008EBC42 /* OnboardingView.swift in Sources */,
+				1D22BFD12B35839300E6A1AE /* CategoryView.swift in Sources */,
 				5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */,
 				01D7AD322B2EF4080097410D /* HowToUseViewModel.swift in Sources */,
 				01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */,
@@ -485,6 +500,7 @@
 				01D7AD392B2F09650097410D /* SceneDelegate.swift in Sources */,
 				01D7AD792B2FCF1A0097410D /* HowToUse.swift in Sources */,
 				5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */,
+				1D22BFD32B35839300E6A1AE /* CategoryDetailVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
