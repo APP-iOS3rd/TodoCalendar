@@ -17,6 +17,8 @@ struct AddTodoView: View {
             
     var body: some View {
         VStack {
+            Spacer()
+            
             HStack {
                 SelectCategoryBtn(selectedCategory: $selectedCategory, categories: self.categories)
                 Spacer()
@@ -24,9 +26,17 @@ struct AddTodoView: View {
             .padding(.bottom, PADDING)
                                     
             AddToDoTextField(content: $content)
+            
+            Spacer()
+            Spacer()
+            HStack {
+                Spacer()
+                AddTodoSaveBtn()
+            }
+            
         }
-        .padding()
-    } 
+        .padding(20)
+    }
 }
 
 #Preview {

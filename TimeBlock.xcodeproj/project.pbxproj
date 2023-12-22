@@ -49,6 +49,7 @@
 		5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */; };
 		5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */; };
 		5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */; };
+		5AEDAC4F2B35288D00FD8598 /* AddTodoSaveBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDAC4E2B35288D00FD8598 /* AddTodoSaveBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +112,7 @@
 		5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryBtn.swift; sourceTree = "<group>"; };
 		5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoTextField.swift; sourceTree = "<group>"; };
+		5AEDAC4E2B35288D00FD8598 /* AddTodoSaveBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoSaveBtn.swift; sourceTree = "<group>"; };
 		843E9546D0EFF3BE40E24F03 /* Pods-TimeBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.debug.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA4F12F944747D64AD20E84 /* Pods-TimeBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.release.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,6 +286,7 @@
 				5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */,
 				5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */,
 				5AEDABE22B340CBA00FD8598 /* SelectCategoryBtn */,
+				5AEDAC4E2B35288D00FD8598 /* AddTodoSaveBtn.swift */,
 			);
 			path = AddToDoView;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */,
 				01D7AD322B2EF4080097410D /* HowToUseViewModel.swift in Sources */,
 				01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */,
+				5AEDAC4F2B35288D00FD8598 /* AddTodoSaveBtn.swift in Sources */,
 				525FE0382B33D64900391E31 /* Category.swift in Sources */,
 				01D7AD412B2FC98F0097410D /* ToDo.swift in Sources */,
 				01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */,
