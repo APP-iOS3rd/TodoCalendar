@@ -8,14 +8,24 @@
 import SwiftData
 import SwiftUI
 
+//@main
+//struct TimeBlockApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            MainView(viewRouter: ViewRouter())
+//        }
+//        .modelContainer(for: ToDo.self)
+//    }
+//}
+
 @main
 struct TimeBlockApp: App {
-    
     var body: some Scene {
         WindowGroup {
+            // MainView(viewRouter: ViewRouter())
             MainView(viewRouter: ViewRouter())
         }
-        .modelContainer(for: ToDo.self)
+        .modelContainer(for: [ToDo.self, Category.self])
     }
 }
 

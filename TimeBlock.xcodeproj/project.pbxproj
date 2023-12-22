@@ -43,12 +43,12 @@
 		525FE0342B33BF1600391E31 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0332B33BF1600391E31 /* TodoData.swift */; };
 		525FE0362B33CA4700391E31 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0352B33CA4700391E31 /* Task.swift */; };
 		525FE0382B33D64900391E31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0372B33D64900391E31 /* Category.swift */; };
-		5AEDABEB2B340CBA00FD8598 /* SampleCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE12B340CBA00FD8598 /* SampleCategoryModel.swift */; };
 		5AEDABEC2B340CBA00FD8598 /* SelectCategorySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE42B340CBA00FD8598 /* SelectCategorySheetView.swift */; };
 		5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */; };
 		5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */; };
 		5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */; };
 		5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */; };
+		5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -105,12 +105,12 @@
 		525FE0352B33CA4700391E31 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		525FE0372B33D64900391E31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5AEDABBB2B33BF5300FD8598 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		5AEDABE12B340CBA00FD8598 /* SampleCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCategoryModel.swift; sourceTree = "<group>"; };
 		5AEDABE42B340CBA00FD8598 /* SelectCategorySheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetView.swift; sourceTree = "<group>"; };
 		5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetCellCircle.swift; sourceTree = "<group>"; };
 		5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetCell.swift; sourceTree = "<group>"; };
 		5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryBtn.swift; sourceTree = "<group>"; };
 		5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoTextField.swift; sourceTree = "<group>"; };
 		843E9546D0EFF3BE40E24F03 /* Pods-TimeBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.debug.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA4F12F944747D64AD20E84 /* Pods-TimeBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.release.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -281,9 +281,9 @@
 		5AEDABE02B340CBA00FD8598 /* AddToDoView */ = {
 			isa = PBXGroup;
 			children = (
-				5AEDABE12B340CBA00FD8598 /* SampleCategoryModel.swift */,
-				5AEDABE22B340CBA00FD8598 /* SelectCategoryBtn */,
 				5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */,
+				5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */,
+				5AEDABE22B340CBA00FD8598 /* SelectCategoryBtn */,
 			);
 			path = AddToDoView;
 			sourceTree = "<group>";
@@ -309,8 +309,8 @@
 		5AEDABE52B340CBA00FD8598 /* SelectCategorySheetCell */ = {
 			isa = PBXGroup;
 			children = (
-				5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */,
 				5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */,
+				5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */,
 			);
 			path = SelectCategorySheetCell;
 			sourceTree = "<group>";
@@ -459,6 +459,7 @@
 				01D7AD352B2F01D40097410D /* TabBarView.swift in Sources */,
 				01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */,
 				01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */,
+				5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */,
 				016AD8142AFCD942006A98B9 /* CalendarView.swift in Sources */,
 				525FE0362B33CA4700391E31 /* Task.swift in Sources */,
 				5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */,
@@ -471,7 +472,6 @@
 				01CACF042B04DCD9008EBC42 /* OnboardingView.swift in Sources */,
 				5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */,
 				01D7AD322B2EF4080097410D /* HowToUseViewModel.swift in Sources */,
-				5AEDABEB2B340CBA00FD8598 /* SampleCategoryModel.swift in Sources */,
 				01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */,
 				525FE0382B33D64900391E31 /* Category.swift in Sources */,
 				01D7AD412B2FC98F0097410D /* ToDo.swift in Sources */,
