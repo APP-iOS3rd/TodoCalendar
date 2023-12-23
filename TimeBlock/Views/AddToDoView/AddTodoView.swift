@@ -11,10 +11,12 @@ import SwiftData
 struct AddTodoView: View {
     let PADDING: CGFloat = 20
     
-    @Query var categories: [Category]
+    @Query(sort: \Category.name) var categories: [Category]
     @State var selectedCategory: Category = Category()
     @State var content = ""
-            
+    
+    @EnvironmentObject var calendarModule: CalendarModule
+    
     var body: some View {
         VStack {
             HStack {
@@ -22,17 +24,23 @@ struct AddTodoView: View {
                 Spacer()
             }
             .padding(.bottom, PADDING)
-                                    
             AddToDoTextField(content: $content)
+            
+            HStack{
+                Text("\(calendarModule.selectedDate.dateToString)")
+                    .font(.bold18)
+                Spacer()
+            }
         }
-        .padding()
-    } 
+        .padding(10)
+        
+    }
 }
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Category.self, configurations: config)
-        
+    
     container.mainContext.insert(Category(name: "할일1", color: "ff7373"))
     container.mainContext.insert(Category(name: "할일2", color: "a2a2d0"))
     container.mainContext.insert(Category(name: "할일3", color: "f5cc7f"))

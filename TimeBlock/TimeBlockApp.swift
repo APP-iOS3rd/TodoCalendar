@@ -20,12 +20,21 @@ import SwiftUI
 
 @main
 struct TimeBlockApp: App {
+    
+    let container: ModelContainer = {
+        let schema = Schema([Category.self])
+        let container = try! ModelContainer(for: schema, configurations: [])
+        return container
+    }()
+    
     var body: some Scene {
         WindowGroup {
             // MainView(viewRouter: ViewRouter())
-            MainView(viewRouter: ViewRouter())
+            CalendarView2()
+        
         }
-        .modelContainer(for: [ToDo.self, Category.self])
+        .modelContainer(container)
+//        .modelContainer(for: [ToDo.self, Category.self])
     }
 }
 
