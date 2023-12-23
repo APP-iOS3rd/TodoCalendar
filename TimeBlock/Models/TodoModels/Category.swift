@@ -14,7 +14,7 @@ final class Category: Identifiable {
     var name: String
     var color: String
     
-    init(id: UUID = UUID(), name: String = "카테고리 선택", color: String = "a2a2d0") {
+    init(id: UUID = UUID(), name: String, color: String) {
         self.id = id
         self.name = name
         self.color = color
