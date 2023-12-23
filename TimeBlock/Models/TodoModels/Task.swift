@@ -10,13 +10,18 @@ import SwiftData
 
 @Model
 final class Task: Identifiable {
-    var content: String
-    var category: String
+    @Attribute(.unique) var id: UUID = UUID()
+    var title: String
+    @Relationship var category: Category?
     var completed: Bool
     
-    init(content: String, category: String, completed: Bool) {
-        self.content = content
-        self.category = category
+    init(title: String, category: Category, completed: Bool) {
+        self.title = title
         self.completed = completed
+        self.setCategory(category)
+    }
+    
+    func setCategory(_ categoty: Category) {
+        self.category = categoty
     }
 }

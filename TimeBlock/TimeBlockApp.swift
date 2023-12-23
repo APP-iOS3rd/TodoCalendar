@@ -22,7 +22,7 @@ import SwiftUI
 struct TimeBlockApp: App {
     
     let container: ModelContainer = {
-        let schema = Schema([Category.self])
+        let schema = Schema([ToDoData.self])
         let container = try! ModelContainer(for: schema, configurations: [])
         return container
     }()

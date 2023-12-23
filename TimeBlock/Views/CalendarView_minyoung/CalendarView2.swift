@@ -42,9 +42,8 @@ struct CalendarView2:View {
                 }
                 .padding(.trailing)
                 .sheet(isPresented: $isModalPresented) {
-                            AddTodoView()
-                          
-                        }
+                            AddTodoView()                          
+                }
                 
                 
                 VStack {
