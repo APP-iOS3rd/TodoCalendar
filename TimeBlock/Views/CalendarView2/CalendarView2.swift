@@ -45,7 +45,6 @@ struct CalendarView2:View {
                             AddTodoView()                          
                 }
                 
-                
                 VStack {
                     Spacer()
                     CalendarModuleView()
@@ -58,7 +57,6 @@ struct CalendarView2:View {
                     Spacer()
                 }
                 Spacer()
-                
             }
             .environmentObject(calendarModule)
         }
