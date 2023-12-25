@@ -194,7 +194,7 @@
 		01D7AD0B2B2C93270097410D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				521807172B352AAA002B0D9E /* CalendarView_minyoung */,
+				521807172B352AAA002B0D9E /* CalendarView2 */,
 				5AEDABE02B340CBA00FD8598 /* AddToDoView */,
 				01D7AD842B3180360097410D /* CalendarView */,
 				01D7AD332B2F01670097410D /* ToDoView */,
@@ -277,12 +277,12 @@
 			path = CalendarView;
 			sourceTree = "<group>";
 		};
-		521807172B352AAA002B0D9E /* CalendarView_minyoung */ = {
+		521807172B352AAA002B0D9E /* CalendarView2 */ = {
 			isa = PBXGroup;
 			children = (
 				521807182B352AE4002B0D9E /* CalendarView2.swift */,
 			);
-			path = CalendarView_minyoung;
+			path = CalendarView2;
 			sourceTree = "<group>";
 		};
 		529A3CED2B33DEF200875ED4 /* TodoModels */ = {
