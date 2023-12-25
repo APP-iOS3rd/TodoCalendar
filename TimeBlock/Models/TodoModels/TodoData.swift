@@ -7,17 +7,18 @@
 
 import Foundation
 import SwiftData
-
+ 
 @Model
 final class ToDoData: Identifiable {
-    @Attribute(.unique) var id = UUID()
-    var date: Date
-    var task: [Task]
+    @Attribute(.unique) var date: String
+    var task: [Task] = []
     
-    init(id: UUID = UUID(), date: Date, task: [Task]) {
-        self.id = id
+    init(date: String) {
         self.date = date
-        self.task = task
+    }
+    
+    func addTask(_ task: Task) {
+        self.task.append(task)
     }
     
     func dateToString(date: Date) -> String {
@@ -27,5 +28,3 @@ final class ToDoData: Identifiable {
         return dateFormatter.string(from: date)
     }
 }
-
- 

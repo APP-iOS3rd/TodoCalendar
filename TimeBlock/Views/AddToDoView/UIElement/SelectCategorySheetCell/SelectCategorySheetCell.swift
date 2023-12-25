@@ -13,12 +13,12 @@ struct SelectCategorySheetCell: View {
     private let RADIUS: CGFloat = 11
     private let BACKGROUND_COLOR: Color = .white
     
-    @Binding var selectedCategory: Category
+    @Binding var selectedCategory: Category?
     var category: Category
             
     var body: some View {
         HStack() {
-            if selectedCategory == category {
+            if let selectedCategory = self.selectedCategory, selectedCategory == category {
                 SelectCategorySheetCellCircle(isClicked: true, color: Color(hex: category.color))
             } else {
                 SelectCategorySheetCellCircle(isClicked: false, color: Color(hex: category.color))
