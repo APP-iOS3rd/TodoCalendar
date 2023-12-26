@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 import FSCalendar
 
 class CalendarModule: UIViewController, FSCalendarDelegate, ObservableObject{
@@ -27,7 +28,7 @@ class CalendarModule: UIViewController, FSCalendarDelegate, ObservableObject{
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       // print(#function)
+        // print(#function)
 
     }
     private func initCalendar(){
@@ -64,6 +65,7 @@ extension CalendarModule: FSCalendarDataSource{
         // 저장한 이벤트 갖고오기
         let events = ["2023-12-25","2023-12-31"]
         
+       // print(events)
         for dateStr in events {
             if(dateFormatter.string(from: date) == dateStr){
                 return 1

@@ -23,18 +23,12 @@ struct CalendarView:View {
             VStack{
                 HStack {
                     Spacer()
-                    Button{
-                        context.insert(Category(name: "할일1", color: "ff7373"))
-                        context.insert(Category(name: "할일2", color: "a2a2d0"))
-                        context.insert(Category(name: "할일3", color: "f5cc7f"))
-                        context.insert(Category(name: "긴 카테고리 글자에요~~~~", color: "ff7373"))
-                        context.insert(Category(name: "할일5", color: "dfc9f1"))
-                        
-                        try! context.save()
-                        dismiss()
+                    NavigationLink {
+                        // 임시 뷰
+                        TempSheetView()
                     } label: {
-                        Image(systemName: "square.and.arrow.down")
-                   }
+                        Image(systemName: "list.bullet")
+                    }
                     Button {
                         isModalPresented.toggle()
                     } label: {
@@ -42,7 +36,7 @@ struct CalendarView:View {
                 }
                 .padding(.trailing)
                 .sheet(isPresented: $isModalPresented) {
-                            AddTodoView()
+                    AddTodoView()
                 }
                 
                 
