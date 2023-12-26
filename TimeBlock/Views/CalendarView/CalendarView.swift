@@ -16,6 +16,9 @@ struct CalendarView:View {
     @Environment(\.dismiss) private var dismiss
     @State private var isModalPresented = false
     @StateObject var calendarModule = CalendarModule()
+
+    
+   
     
     var body: some View {
         
@@ -25,9 +28,11 @@ struct CalendarView:View {
                     Spacer()
                     NavigationLink {
                         // 임시 뷰
-                        TempSheetView()
+                        SearchView()
+                         
+                        
                     } label: {
-                        Image(systemName: "list.bullet")
+                        Image(systemName: "magnifyingglass")
                     }
                     Button {
                         isModalPresented.toggle()
