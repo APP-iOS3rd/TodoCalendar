@@ -8,8 +8,6 @@
 import SwiftUI
 import SwiftData
 
-@Query var todoData: [ToDoData]
-
 struct TempSheetView: View {
     @Query var todoData: [ToDoData]
     
