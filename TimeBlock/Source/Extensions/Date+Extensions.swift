@@ -33,4 +33,13 @@ extension Date {
         }
         
     }
+    
+    // date -> String
+    var dateToString: String{
+        let dfMatter = DateFormatter()
+        dfMatter.locale = Locale(identifier: "ko_KR")
+        dfMatter.dateFormat = "MM월 dd일 (E)"
+        
+        return dfMatter.string(from: self)
+    }
 }

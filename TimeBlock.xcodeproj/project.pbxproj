@@ -40,7 +40,21 @@
 		01D7AD912B32FE1C0097410D /* Pods_TimeBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; };
 		01D7AD922B32FE1C0097410D /* Pods_TimeBlock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD982B33025B0097410D /* CalendarModule.swift */; };
-		01D7AD9D2B3315BA0097410D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 01D7AD9C2B3315BA0097410D /* .gitignore */; };
+		521807192B352AE4002B0D9E /* CalendarView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521807182B352AE4002B0D9E /* CalendarView2.swift */; };
+		525FE0342B33BF1600391E31 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0332B33BF1600391E31 /* TodoData.swift */; };
+		525FE0362B33CA4700391E31 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0352B33CA4700391E31 /* Task.swift */; };
+		525FE0382B33D64900391E31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0372B33D64900391E31 /* Category.swift */; };
+		5AB52A222B3A5A5900B2274C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB52A202B3A5A5900B2274C /* CategoryView.swift */; };
+		5AB52A232B3A5A5900B2274C /* CategoryDetailVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */; };
+		5AEDABEC2B340CBA00FD8598 /* SelectCategorySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE42B340CBA00FD8598 /* SelectCategorySheetView.swift */; };
+		5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */; };
+		5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */; };
+		5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */; };
+		5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */; };
+		5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */; };
+		5AEDAC4F2B35288D00FD8598 /* AddTodoSaveBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDAC4E2B35288D00FD8598 /* AddTodoSaveBtn.swift */; };
+		5AEDACC92B36BF8100FD8598 /* AddToDoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDACC82B36BF8100FD8598 /* AddToDoVM.swift */; };
+		5AEDACCB2B36C03D00FD8598 /* TempSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDACCA2B36C03D00FD8598 /* TempSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -92,8 +106,23 @@
 		01D7AD8B2B319E1E0097410D /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		01D7AD8D2B31A0D10097410D /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		01D7AD982B33025B0097410D /* CalendarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModule.swift; sourceTree = "<group>"; };
-		01D7AD9C2B3315BA0097410D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		521807182B352AE4002B0D9E /* CalendarView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView2.swift; sourceTree = "<group>"; };
+		525FE0332B33BF1600391E31 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
+		525FE0352B33CA4700391E31 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		525FE0372B33D64900391E31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		5AB52A202B3A5A5900B2274C /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailVIew.swift; sourceTree = "<group>"; };
+		5AEDABBB2B33BF5300FD8598 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5AEDABE42B340CBA00FD8598 /* SelectCategorySheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetView.swift; sourceTree = "<group>"; };
+		5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetCellCircle.swift; sourceTree = "<group>"; };
+		5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategorySheetCell.swift; sourceTree = "<group>"; };
+		5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryBtn.swift; sourceTree = "<group>"; };
+		5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoTextField.swift; sourceTree = "<group>"; };
+		5AEDAC4E2B35288D00FD8598 /* AddTodoSaveBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoSaveBtn.swift; sourceTree = "<group>"; };
+		5AEDACC82B36BF8100FD8598 /* AddToDoVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToDoVM.swift; sourceTree = "<group>"; };
+		5AEDACCA2B36C03D00FD8598 /* TempSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempSheetView.swift; sourceTree = "<group>"; };
 		843E9546D0EFF3BE40E24F03 /* Pods-TimeBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.debug.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA4F12F944747D64AD20E84 /* Pods-TimeBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.release.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +142,7 @@
 		019CA2CD2AF4BF89004598D9 = {
 			isa = PBXGroup;
 			children = (
-				01D7AD9C2B3315BA0097410D /* .gitignore */,
+				5AEDABBB2B33BF5300FD8598 /* .gitignore */,
 				016AD8152AFD1197006A98B9 /* README.md */,
 				019CA2D82AF4BF89004598D9 /* TimeBlock */,
 				019CA2D72AF4BF89004598D9 /* Products */,
@@ -157,6 +186,7 @@
 		01CACF8A2B0B61E3008EBC42 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				529A3CED2B33DEF200875ED4 /* TodoModels */,
 				01D7AD782B2FCF1A0097410D /* HowToUse.swift */,
 				01D7AD402B2FC98F0097410D /* ToDo.swift */,
 				01D7AD892B319D550097410D /* Tag.swift */,
@@ -168,6 +198,9 @@
 		01D7AD0B2B2C93270097410D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AB52A1F2B3A5A5900B2274C /* CategoryView */,
+				521807172B352AAA002B0D9E /* CalendarView_minyoung */,
+				5AEDABE02B340CBA00FD8598 /* AddToDoView */,
 				01D7AD842B3180360097410D /* CalendarView */,
 				01D7AD332B2F01670097410D /* ToDoView */,
 				01D7AD2E2B2EED160097410D /* OnboardingView */,
@@ -247,6 +280,81 @@
 				01D7AD982B33025B0097410D /* CalendarModule.swift */,
 			);
 			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		521807172B352AAA002B0D9E /* CalendarView_minyoung */ = {
+			isa = PBXGroup;
+			children = (
+				521807182B352AE4002B0D9E /* CalendarView2.swift */,
+			);
+			path = CalendarView_minyoung;
+			sourceTree = "<group>";
+		};
+		529A3CED2B33DEF200875ED4 /* TodoModels */ = {
+			isa = PBXGroup;
+			children = (
+				525FE0332B33BF1600391E31 /* TodoData.swift */,
+				525FE0352B33CA4700391E31 /* Task.swift */,
+				525FE0372B33D64900391E31 /* Category.swift */,
+			);
+			path = TodoModels;
+			sourceTree = "<group>";
+		};
+		5AB52A1F2B3A5A5900B2274C /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				5AB52A202B3A5A5900B2274C /* CategoryView.swift */,
+				5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */,
+			);
+			path = CategoryView;
+			sourceTree = "<group>";
+		};
+		5AEDABE02B340CBA00FD8598 /* AddToDoView */ = {
+			isa = PBXGroup;
+			children = (
+				5AEDACCE2B36C46D00FD8598 /* ViewModel */,
+				5AEDACCD2B36C42200FD8598 /* Views */,
+				5AEDACCC2B36C41300FD8598 /* UIElement */,
+			);
+			path = AddToDoView;
+			sourceTree = "<group>";
+		};
+		5AEDABE52B340CBA00FD8598 /* SelectCategorySheetCell */ = {
+			isa = PBXGroup;
+			children = (
+				5AEDABE72B340CBA00FD8598 /* SelectCategorySheetCell.swift */,
+				5AEDABE62B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift */,
+			);
+			path = SelectCategorySheetCell;
+			sourceTree = "<group>";
+		};
+		5AEDACCC2B36C41300FD8598 /* UIElement */ = {
+			isa = PBXGroup;
+			children = (
+				5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */,
+				5AEDAC4E2B35288D00FD8598 /* AddTodoSaveBtn.swift */,
+				5AEDABE82B340CBA00FD8598 /* SelectCategoryBtn.swift */,
+				5AEDABE52B340CBA00FD8598 /* SelectCategorySheetCell */,
+			);
+			path = UIElement;
+			sourceTree = "<group>";
+		};
+		5AEDACCD2B36C42200FD8598 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */,
+				5AEDACCA2B36C03D00FD8598 /* TempSheetView.swift */,
+				5AEDABE42B340CBA00FD8598 /* SelectCategorySheetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AEDACCE2B36C46D00FD8598 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5AEDACC82B36BF8100FD8598 /* AddToDoVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		76E276DD76FA62C0A586769F /* Pods */ = {
@@ -337,7 +445,6 @@
 				01D7AD1A2B2C94BE0097410D /* Pretendard-Black.otf in Resources */,
 				01D7AD1E2B2C94BE0097410D /* Pretendard-Bold.otf in Resources */,
 				01D7AD1B2B2C94BE0097410D /* Pretendard-Medium.otf in Resources */,
-				01D7AD9D2B3315BA0097410D /* .gitignore in Resources */,
 				01D7AD202B2C94BE0097410D /* Pretendard-ExtraLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,23 +501,38 @@
 				01D7AD352B2F01D40097410D /* TabBarView.swift in Sources */,
 				01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */,
 				01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */,
+				5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */,
 				016AD8142AFCD942006A98B9 /* CalendarView.swift in Sources */,
+				525FE0362B33CA4700391E31 /* Task.swift in Sources */,
+				5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */,
 				01CACF452B08F40C008EBC42 /* ToDoDetailView.swift in Sources */,
+				525FE0342B33BF1600391E31 /* TodoData.swift in Sources */,
 				01D7AD872B31872C0097410D /* View+Extensions.swift in Sources */,
 				01D7AD8A2B319D550097410D /* Tag.swift in Sources */,
 				01D7AD8C2B319E1E0097410D /* RGBColor.swift in Sources */,
+				5AB52A232B3A5A5900B2274C /* CategoryDetailVIew.swift in Sources */,
+				5AEDACC92B36BF8100FD8598 /* AddToDoVM.swift in Sources */,
 				01D7AD3B2B2F0BEB0097410D /* MainView.swift in Sources */,
 				01CACF042B04DCD9008EBC42 /* OnboardingView.swift in Sources */,
+				5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */,
 				01D7AD322B2EF4080097410D /* HowToUseViewModel.swift in Sources */,
 				01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */,
+				5AB52A222B3A5A5900B2274C /* CategoryView.swift in Sources */,
+				5AEDAC4F2B35288D00FD8598 /* AddTodoSaveBtn.swift in Sources */,
+				525FE0382B33D64900391E31 /* Category.swift in Sources */,
 				01D7AD412B2FC98F0097410D /* ToDo.swift in Sources */,
 				01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */,
+				521807192B352AE4002B0D9E /* CalendarView2.swift in Sources */,
 				019CA2DA2AF4BF89004598D9 /* TimeBlockApp.swift in Sources */,
 				01D7AD8E2B31A0D10097410D /* TagListView.swift in Sources */,
 				01CACF0C2B04EFC5008EBC42 /* ToDoListView.swift in Sources */,
 				01D7AD2B2B2ED9E90097410D /* Color+Extensions.swift in Sources */,
+				5AEDABEC2B340CBA00FD8598 /* SelectCategorySheetView.swift in Sources */,
+				5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */,
 				01D7AD392B2F09650097410D /* SceneDelegate.swift in Sources */,
 				01D7AD792B2FCF1A0097410D /* HowToUse.swift in Sources */,
+				5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */,
+				5AEDACCB2B36C03D00FD8598 /* TempSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
