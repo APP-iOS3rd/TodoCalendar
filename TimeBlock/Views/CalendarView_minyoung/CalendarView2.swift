@@ -7,7 +7,6 @@
 
 import SwiftUI
 import PromiseKit
-import CoreLocation
 import SwiftData
 
 struct CalendarView2:View {
@@ -68,6 +67,6 @@ struct CalendarView2:View {
 }
 
 
-#Preview {
-    CalendarView2()
-}
+//#Preview {
+//    CalendarView2()
+//}

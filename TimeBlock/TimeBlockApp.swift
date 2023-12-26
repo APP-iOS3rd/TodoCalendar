@@ -29,8 +29,8 @@ struct TimeBlockApp: App {
     
     var body: some Scene {
         WindowGroup {
-            // MainView(viewRouter: ViewRouter())
-            CalendarView2()
+          //  MainView(viewRouter: ViewRouter())
+            CalendarView()
         
         }
         .modelContainer(container)
