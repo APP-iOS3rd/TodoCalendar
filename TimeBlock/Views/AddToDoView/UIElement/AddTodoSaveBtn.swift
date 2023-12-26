@@ -44,7 +44,7 @@ struct AddTodoSaveBtn: View {
 extension AddTodoSaveBtn {
     func saveTodo() {
         guard let category = addToDoVM.selectedCategory else { return }
-        let task = Task(title: addToDoVM.title, category: category, completed: false)
+        let task = Task(title: addToDoVM.title, category: category, completed: false, time: Time())
         
         if let filtered = todoData.filter({ $0.date == addToDoVM.date}).first {
             filtered.addTask(task)

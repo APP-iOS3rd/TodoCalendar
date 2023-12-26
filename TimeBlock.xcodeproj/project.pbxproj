@@ -11,9 +11,6 @@
 		019CA2DA2AF4BF89004598D9 /* TimeBlockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CA2D92AF4BF89004598D9 /* TimeBlockApp.swift */; };
 		019CA2DE2AF4BF8B004598D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019CA2DD2AF4BF8B004598D9 /* Assets.xcassets */; };
 		019CA2E12AF4BF8B004598D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019CA2E02AF4BF8B004598D9 /* Preview Assets.xcassets */; };
-		01CACF042B04DCD9008EBC42 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CACF032B04DCD9008EBC42 /* OnboardingView.swift */; };
-		01CACF0C2B04EFC5008EBC42 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CACF0B2B04EFC5008EBC42 /* ToDoListView.swift */; };
-		01CACF452B08F40C008EBC42 /* ToDoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CACF442B08F40C008EBC42 /* ToDoDetailView.swift */; };
 		01D7AD192B2C94BE0097410D /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 01D7AD102B2C94BE0097410D /* Pretendard-Regular.otf */; };
 		01D7AD1A2B2C94BE0097410D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 01D7AD112B2C94BE0097410D /* Pretendard-Black.otf */; };
 		01D7AD1B2B2C94BE0097410D /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 01D7AD122B2C94BE0097410D /* Pretendard-Medium.otf */; };
@@ -25,22 +22,14 @@
 		01D7AD212B2C94BE0097410D /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 01D7AD182B2C94BE0097410D /* Pretendard-SemiBold.otf */; };
 		01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD272B2ED8D70097410D /* Font+Extensions.swift */; };
 		01D7AD2B2B2ED9E90097410D /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD2A2B2ED9E90097410D /* Color+Extensions.swift */; };
-		01D7AD322B2EF4080097410D /* HowToUseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD312B2EF4080097410D /* HowToUseViewModel.swift */; };
-		01D7AD352B2F01D40097410D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD342B2F01D40097410D /* TabBarView.swift */; };
 		01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD362B2F05DA0097410D /* ViewRouter.swift */; };
-		01D7AD392B2F09650097410D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD382B2F09650097410D /* SceneDelegate.swift */; };
-		01D7AD3B2B2F0BEB0097410D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD3A2B2F0BEB0097410D /* MainView.swift */; };
-		01D7AD412B2FC98F0097410D /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD402B2FC98F0097410D /* ToDo.swift */; };
-		01D7AD792B2FCF1A0097410D /* HowToUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD782B2FCF1A0097410D /* HowToUse.swift */; };
 		01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD7C2B3162A70097410D /* Date+Extensions.swift */; };
 		01D7AD872B31872C0097410D /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD862B31872C0097410D /* View+Extensions.swift */; };
-		01D7AD8A2B319D550097410D /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD892B319D550097410D /* Tag.swift */; };
 		01D7AD8C2B319E1E0097410D /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD8B2B319E1E0097410D /* RGBColor.swift */; };
-		01D7AD8E2B31A0D10097410D /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD8D2B31A0D10097410D /* TagListView.swift */; };
 		01D7AD912B32FE1C0097410D /* Pods_TimeBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; };
 		01D7AD922B32FE1C0097410D /* Pods_TimeBlock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD982B33025B0097410D /* CalendarModule.swift */; };
-		521807192B352AE4002B0D9E /* CalendarView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521807182B352AE4002B0D9E /* CalendarView2.swift */; };
+		5208FA4A2B3AE227000F7B3A /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208FA492B3AE227000F7B3A /* Time.swift */; };
 		525FE0342B33BF1600391E31 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0332B33BF1600391E31 /* TodoData.swift */; };
 		525FE0362B33CA4700391E31 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0352B33CA4700391E31 /* Task.swift */; };
 		525FE0382B33D64900391E31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0372B33D64900391E31 /* Category.swift */; };
@@ -78,9 +67,6 @@
 		019CA2D92AF4BF89004598D9 /* TimeBlockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockApp.swift; sourceTree = "<group>"; };
 		019CA2DD2AF4BF8B004598D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		019CA2E02AF4BF8B004598D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		01CACF032B04DCD9008EBC42 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		01CACF0B2B04EFC5008EBC42 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
-		01CACF442B08F40C008EBC42 /* ToDoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailView.swift; sourceTree = "<group>"; };
 		01D7AD102B2C94BE0097410D /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		01D7AD112B2C94BE0097410D /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		01D7AD122B2C94BE0097410D /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
@@ -93,21 +79,13 @@
 		01D7AD272B2ED8D70097410D /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		01D7AD292B2ED91B0097410D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		01D7AD2A2B2ED9E90097410D /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		01D7AD312B2EF4080097410D /* HowToUseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseViewModel.swift; sourceTree = "<group>"; };
-		01D7AD342B2F01D40097410D /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		01D7AD362B2F05DA0097410D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		01D7AD382B2F09650097410D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01D7AD3A2B2F0BEB0097410D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		01D7AD402B2FC98F0097410D /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
-		01D7AD782B2FCF1A0097410D /* HowToUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUse.swift; sourceTree = "<group>"; };
 		01D7AD7C2B3162A70097410D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		01D7AD862B31872C0097410D /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		01D7AD892B319D550097410D /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		01D7AD8B2B319E1E0097410D /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
-		01D7AD8D2B31A0D10097410D /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		01D7AD982B33025B0097410D /* CalendarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModule.swift; sourceTree = "<group>"; };
 		22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		521807182B352AE4002B0D9E /* CalendarView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView2.swift; sourceTree = "<group>"; };
+		5208FA492B3AE227000F7B3A /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		525FE0332B33BF1600391E31 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 		525FE0352B33CA4700391E31 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		525FE0372B33D64900391E31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -168,7 +146,6 @@
 				01D7AD0B2B2C93270097410D /* Views */,
 				01CACF8A2B0B61E3008EBC42 /* Models */,
 				019CA2D92AF4BF89004598D9 /* TimeBlockApp.swift */,
-				01D7AD382B2F09650097410D /* SceneDelegate.swift */,
 				019CA2DD2AF4BF8B004598D9 /* Assets.xcassets */,
 				019CA2DF2AF4BF8B004598D9 /* Preview Content */,
 			);
@@ -187,9 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				529A3CED2B33DEF200875ED4 /* TodoModels */,
-				01D7AD782B2FCF1A0097410D /* HowToUse.swift */,
-				01D7AD402B2FC98F0097410D /* ToDo.swift */,
-				01D7AD892B319D550097410D /* Tag.swift */,
 				01D7AD8B2B319E1E0097410D /* RGBColor.swift */,
 			);
 			path = Models;
@@ -199,13 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				5AB52A1F2B3A5A5900B2274C /* CategoryView */,
-				521807172B352AAA002B0D9E /* CalendarView_minyoung */,
 				5AEDABE02B340CBA00FD8598 /* AddToDoView */,
 				01D7AD842B3180360097410D /* CalendarView */,
-				01D7AD332B2F01670097410D /* ToDoView */,
-				01D7AD2E2B2EED160097410D /* OnboardingView */,
-				01D7AD3A2B2F0BEB0097410D /* MainView.swift */,
-				01D7AD342B2F01D40097410D /* TabBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,25 +223,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		01D7AD2E2B2EED160097410D /* OnboardingView */ = {
-			isa = PBXGroup;
-			children = (
-				01D7AD312B2EF4080097410D /* HowToUseViewModel.swift */,
-				01CACF032B04DCD9008EBC42 /* OnboardingView.swift */,
-			);
-			path = OnboardingView;
-			sourceTree = "<group>";
-		};
-		01D7AD332B2F01670097410D /* ToDoView */ = {
-			isa = PBXGroup;
-			children = (
-				01CACF442B08F40C008EBC42 /* ToDoDetailView.swift */,
-				01CACF0B2B04EFC5008EBC42 /* ToDoListView.swift */,
-				01D7AD8D2B31A0D10097410D /* TagListView.swift */,
-			);
-			path = ToDoView;
-			sourceTree = "<group>";
-		};
 		01D7AD842B3180360097410D /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,20 +232,13 @@
 			path = CalendarView;
 			sourceTree = "<group>";
 		};
-		521807172B352AAA002B0D9E /* CalendarView_minyoung */ = {
-			isa = PBXGroup;
-			children = (
-				521807182B352AE4002B0D9E /* CalendarView2.swift */,
-			);
-			path = CalendarView_minyoung;
-			sourceTree = "<group>";
-		};
 		529A3CED2B33DEF200875ED4 /* TodoModels */ = {
 			isa = PBXGroup;
 			children = (
 				525FE0332B33BF1600391E31 /* TodoData.swift */,
 				525FE0352B33CA4700391E31 /* Task.swift */,
 				525FE0372B33D64900391E31 /* Category.swift */,
+				5208FA492B3AE227000F7B3A /* Time.swift */,
 			);
 			path = TodoModels;
 			sourceTree = "<group>";
@@ -498,39 +441,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01D7AD352B2F01D40097410D /* TabBarView.swift in Sources */,
 				01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */,
 				01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */,
 				5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */,
 				016AD8142AFCD942006A98B9 /* CalendarView.swift in Sources */,
 				525FE0362B33CA4700391E31 /* Task.swift in Sources */,
 				5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */,
-				01CACF452B08F40C008EBC42 /* ToDoDetailView.swift in Sources */,
 				525FE0342B33BF1600391E31 /* TodoData.swift in Sources */,
 				01D7AD872B31872C0097410D /* View+Extensions.swift in Sources */,
-				01D7AD8A2B319D550097410D /* Tag.swift in Sources */,
 				01D7AD8C2B319E1E0097410D /* RGBColor.swift in Sources */,
 				5AB52A232B3A5A5900B2274C /* CategoryDetailVIew.swift in Sources */,
 				5AEDACC92B36BF8100FD8598 /* AddToDoVM.swift in Sources */,
-				01D7AD3B2B2F0BEB0097410D /* MainView.swift in Sources */,
-				01CACF042B04DCD9008EBC42 /* OnboardingView.swift in Sources */,
 				5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */,
-				01D7AD322B2EF4080097410D /* HowToUseViewModel.swift in Sources */,
+				5208FA4A2B3AE227000F7B3A /* Time.swift in Sources */,
 				01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */,
 				5AB52A222B3A5A5900B2274C /* CategoryView.swift in Sources */,
 				5AEDAC4F2B35288D00FD8598 /* AddTodoSaveBtn.swift in Sources */,
 				525FE0382B33D64900391E31 /* Category.swift in Sources */,
-				01D7AD412B2FC98F0097410D /* ToDo.swift in Sources */,
 				01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */,
-				521807192B352AE4002B0D9E /* CalendarView2.swift in Sources */,
 				019CA2DA2AF4BF89004598D9 /* TimeBlockApp.swift in Sources */,
-				01D7AD8E2B31A0D10097410D /* TagListView.swift in Sources */,
-				01CACF0C2B04EFC5008EBC42 /* ToDoListView.swift in Sources */,
 				01D7AD2B2B2ED9E90097410D /* Color+Extensions.swift in Sources */,
 				5AEDABEC2B340CBA00FD8598 /* SelectCategorySheetView.swift in Sources */,
 				5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */,
-				01D7AD392B2F09650097410D /* SceneDelegate.swift in Sources */,
-				01D7AD792B2FCF1A0097410D /* HowToUse.swift in Sources */,
 				5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */,
 				5AEDACCB2B36C03D00FD8598 /* TempSheetView.swift in Sources */,
 			);

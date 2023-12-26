@@ -14,14 +14,22 @@ final class Task: Identifiable {
     var title: String
     @Relationship var category: Category?
     var completed: Bool
+    var time: Time?
     
-    init(title: String, category: Category, completed: Bool) {
+    init(title: String, category: Category, completed: Bool, time: Time) {
         self.title = title
         self.completed = completed
         self.setCategory(category)
+        self.setTime(time)
     }
     
     func setCategory(_ categoty: Category) {
         self.category = categoty
     }
+    
+    
+    func setTime(_ time: Time){
+        self.time = time
+    }
+
 }

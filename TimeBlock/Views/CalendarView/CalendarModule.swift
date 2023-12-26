@@ -68,7 +68,7 @@ extension CalendarModule: FSCalendarDataSource{
        // print(events)
         for dateStr in events {
             if(dateFormatter.string(from: date) == dateStr){
-                return 1
+                return 2
             }
         }
         return 0
