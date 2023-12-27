@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct TodoCategoryView: View {
+    @State var showCategoryView = false
     var category: Category?
     
     var body: some View {
-        Text(category?.name ?? "")
-        .foregroundColor(.white)
-        .minimumScaleFactor(0.5)
-        .padding(.horizontal, 10)
-        .frame(height: 26, alignment: .center)
-        .background(Color(hex: category?.color ?? "a2a2d0"))
-        .cornerRadius(25)
+        NavigationStack {
+            Button {
+                self.showCategoryView.toggle()
+            } label: {
+                Text(category?.name ?? "")
+                    .foregroundColor(.white)
+                    .minimumScaleFactor(0.5)
+                    .padding(.horizontal, 10)
+                    .frame(height: 26, alignment: .center)
+                    .background(Color(hex: category?.color ?? "a2a2d0"))
+                    .cornerRadius(25)
+            }
+            .sheet(isPresented: $showCategoryView) {
+                CategoryView()
+                    .presentationDetents([.fraction(1.0)])
+            }
+        }
+        
     }
-}
-
-#Preview {
-    TodoCategoryView(category: Category(name: "기념일", color: "a2a2d0"))
 }
