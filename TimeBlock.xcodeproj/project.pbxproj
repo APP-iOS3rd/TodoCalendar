@@ -258,10 +258,10 @@
 			isa = PBXGroup;
 			children = (
 				5A4AC32E2B3BB3AD005A67CA /* TaskCellView.swift */,
-				5A4AC32F2B3BB3AD005A67CA /* UIElement */,
 				5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */,
 				5A4AC3322B3BB3AD005A67CA /* TodoCategoryView.swift */,
 				5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */,
+				5A4AC32F2B3BB3AD005A67CA /* UIElement */,
 			);
 			path = TodoDetailView;
 			sourceTree = "<group>";

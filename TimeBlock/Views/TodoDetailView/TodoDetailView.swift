@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct TodoDetailView: View {
-    @Binding var todo: ToDoData?
     @Binding var isShownSheet: Bool
     var task: Task
     var date: Date
@@ -23,7 +22,7 @@ struct TodoDetailView: View {
                     
                     Spacer()
                     
-                    TodoDeleteBtn(todo: self.$todo, isShownSheet: self.$isShownSheet, task: self.task, date: self.date)
+                    TodoDeleteBtn(isShownSheet: self.$isShownSheet, task: self.task, date: self.date)
                 }
                                                         
                 Text(task.title)

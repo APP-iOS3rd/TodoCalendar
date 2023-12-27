@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TaskCellView: View {
-    @Binding var todo: ToDoData?
     @State var isShownSheet = false
     var task: Task
     var date: Date
@@ -25,7 +24,7 @@ struct TaskCellView: View {
             }
         }
         .sheet(isPresented: $isShownSheet) {
-            TodoDetailView(todo: self.$todo, isShownSheet: $isShownSheet, task: self.task, date: self.date)
+            TodoDetailView(isShownSheet: $isShownSheet, task: self.task, date: self.date)
                 .presentationDetents([.fraction(0.5)])
         }
         .frame(minWidth: 0, maxWidth: .infinity)
@@ -35,7 +34,3 @@ struct TaskCellView: View {
         
     }
 }
-
-//#Preview {
-//    TaskCellView()
-//}
