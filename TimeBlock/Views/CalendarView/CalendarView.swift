@@ -36,7 +36,7 @@ struct CalendarView:View {
                 }
                 .padding(.trailing)
                 .sheet(isPresented: $isModalPresented) {
-                    AddTodoView()
+                    AddTodoView(isModalPresented: self.$isModalPresented)
                 }
                 
                 

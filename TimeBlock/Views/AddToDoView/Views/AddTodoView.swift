@@ -11,6 +11,7 @@ import SwiftData
 struct AddTodoView: View {
     @EnvironmentObject var calendarModule: CalendarModule
     @StateObject var addToDoVM = AddToDoVM()
+    @Binding var isModalPresented: Bool
         
     var body: some View {
         VStack {
@@ -35,7 +36,7 @@ struct AddTodoView: View {
             
             HStack {
                 Spacer()
-                AddTodoSaveBtn(addToDoVM: addToDoVM)
+                AddTodoSaveBtn(addToDoVM: addToDoVM, isModalPresented: self.$isModalPresented)
             }
         }
         .padding(20)

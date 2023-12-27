@@ -12,12 +12,12 @@ struct AddTodoSaveBtn: View {
     @Environment(\.modelContext) var modelContext
     @Query var todoData: [ToDoData]
     @StateObject var addToDoVM: AddToDoVM
-    @State var isShownSheet = false
+    @Binding var isModalPresented: Bool
         
     var body: some View {
         Button {
+            isModalPresented.toggle()
             saveTodo()
-            self.isShownSheet.toggle()
         } label: {
             HStack {
                 Image(systemName: "checkmark")
@@ -34,10 +34,6 @@ struct AddTodoSaveBtn: View {
         .frame(height: 50)
         .background(.black)
         .cornerRadius(33)
-        .sheet(isPresented: $isShownSheet) {
-            TempSheetView()
-        }
-        
     }
 }
 
