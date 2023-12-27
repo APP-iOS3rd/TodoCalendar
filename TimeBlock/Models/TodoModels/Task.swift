@@ -14,7 +14,7 @@ final class Task: Identifiable {
     var title: String
     @Relationship var category: Category?
     var completed: Bool
-    var time: Time?
+    @Relationship var time: Time?
     
     init(title: String, category: Category, completed: Bool, time: Time) {
         self.title = title

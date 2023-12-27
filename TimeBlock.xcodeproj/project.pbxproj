@@ -33,6 +33,11 @@
 		525FE0342B33BF1600391E31 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0332B33BF1600391E31 /* TodoData.swift */; };
 		525FE0362B33CA4700391E31 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0352B33CA4700391E31 /* Task.swift */; };
 		525FE0382B33D64900391E31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0372B33D64900391E31 /* Category.swift */; };
+		5A4AC3342B3BB3AE005A67CA /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC32E2B3BB3AD005A67CA /* TaskCellView.swift */; };
+		5A4AC3352B3BB3AE005A67CA /* TodoDeleteBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3302B3BB3AD005A67CA /* TodoDeleteBtn.swift */; };
+		5A4AC3362B3BB3AE005A67CA /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */; };
+		5A4AC3372B3BB3AE005A67CA /* TodoCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3322B3BB3AD005A67CA /* TodoCategoryView.swift */; };
+		5A4AC3382B3BB3AE005A67CA /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */; };
 		5AB52A222B3A5A5900B2274C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB52A202B3A5A5900B2274C /* CategoryView.swift */; };
 		5AB52A232B3A5A5900B2274C /* CategoryDetailVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */; };
 		5AEDABEC2B340CBA00FD8598 /* SelectCategorySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE42B340CBA00FD8598 /* SelectCategorySheetView.swift */; };
@@ -89,6 +94,11 @@
 		525FE0332B33BF1600391E31 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 		525FE0352B33CA4700391E31 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		525FE0372B33D64900391E31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		5A4AC32E2B3BB3AD005A67CA /* TaskCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
+		5A4AC3302B3BB3AD005A67CA /* TodoDeleteBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDeleteBtn.swift; sourceTree = "<group>"; };
+		5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		5A4AC3322B3BB3AD005A67CA /* TodoCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoCategoryView.swift; sourceTree = "<group>"; };
+		5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		5AB52A202B3A5A5900B2274C /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailVIew.swift; sourceTree = "<group>"; };
 		5AEDABBB2B33BF5300FD8598 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -172,6 +182,7 @@
 		01D7AD0B2B2C93270097410D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A4AC32D2B3BB3AD005A67CA /* TodoDetailView */,
 				5AB52A1F2B3A5A5900B2274C /* CategoryView */,
 				5AEDABE02B340CBA00FD8598 /* AddToDoView */,
 				01D7AD842B3180360097410D /* CalendarView */,
@@ -241,6 +252,26 @@
 				5208FA492B3AE227000F7B3A /* Time.swift */,
 			);
 			path = TodoModels;
+			sourceTree = "<group>";
+		};
+		5A4AC32D2B3BB3AD005A67CA /* TodoDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				5A4AC32E2B3BB3AD005A67CA /* TaskCellView.swift */,
+				5A4AC32F2B3BB3AD005A67CA /* UIElement */,
+				5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */,
+				5A4AC3322B3BB3AD005A67CA /* TodoCategoryView.swift */,
+				5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */,
+			);
+			path = TodoDetailView;
+			sourceTree = "<group>";
+		};
+		5A4AC32F2B3BB3AD005A67CA /* UIElement */ = {
+			isa = PBXGroup;
+			children = (
+				5A4AC3302B3BB3AD005A67CA /* TodoDeleteBtn.swift */,
+			);
+			path = UIElement;
 			sourceTree = "<group>";
 		};
 		5AB52A1F2B3A5A5900B2274C /* CategoryView */ = {
@@ -442,19 +473,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */,
+				5A4AC3362B3BB3AE005A67CA /* TodoDetailView.swift in Sources */,
 				01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */,
 				5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */,
+				5A4AC3372B3BB3AE005A67CA /* TodoCategoryView.swift in Sources */,
 				016AD8142AFCD942006A98B9 /* CalendarView.swift in Sources */,
+				5A4AC3342B3BB3AE005A67CA /* TaskCellView.swift in Sources */,
 				525FE0362B33CA4700391E31 /* Task.swift in Sources */,
 				5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */,
 				525FE0342B33BF1600391E31 /* TodoData.swift in Sources */,
 				01D7AD872B31872C0097410D /* View+Extensions.swift in Sources */,
 				01D7AD8C2B319E1E0097410D /* RGBColor.swift in Sources */,
 				5AB52A232B3A5A5900B2274C /* CategoryDetailVIew.swift in Sources */,
+				5A4AC3382B3BB3AE005A67CA /* TodoListView.swift in Sources */,
 				5AEDACC92B36BF8100FD8598 /* AddToDoVM.swift in Sources */,
 				5AEDABF12B340CBA00FD8598 /* AddTodoView.swift in Sources */,
 				5208FA4A2B3AE227000F7B3A /* Time.swift in Sources */,
 				01D7AD7D2B3162A70097410D /* Date+Extensions.swift in Sources */,
+				5A4AC3352B3BB3AE005A67CA /* TodoDeleteBtn.swift in Sources */,
 				5AB52A222B3A5A5900B2274C /* CategoryView.swift in Sources */,
 				5AEDAC4F2B35288D00FD8598 /* AddTodoSaveBtn.swift in Sources */,
 				525FE0382B33D64900391E31 /* Category.swift in Sources */,

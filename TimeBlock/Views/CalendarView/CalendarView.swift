@@ -48,8 +48,7 @@ struct CalendarView:View {
                 
                 VStack {
                     Spacer()
-                    Text("Details")
-                    Spacer()
+                    TodoListView(date: $calendarModule.selectedDate)
                 }
                 Spacer()
                 
