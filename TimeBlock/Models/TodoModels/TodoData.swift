@@ -21,6 +21,10 @@ final class ToDoData: Identifiable {
         self.task.append(task)
     }
     
+    func deleteTask(_ task: Task) {
+        self.task = self.task.filter({$0 != task})
+    }
+    
     func dateToString(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "ko_KR")

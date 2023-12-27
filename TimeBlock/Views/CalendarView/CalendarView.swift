@@ -46,7 +46,7 @@ struct CalendarView:View {
                 }
                 .padding(.trailing)
                 .sheet(isPresented: $isModalPresented) {
-                    AddTodoView()
+                    AddTodoView(isModalPresented: self.$isModalPresented)
                 }
                 
                 
@@ -58,8 +58,7 @@ struct CalendarView:View {
                 
                 VStack {
                     Spacer()
-                    Text("Details")
-                    Spacer()
+                    TodoListView(date: $calendarModule.selectedDate)
                 }
                 Spacer()
                 
