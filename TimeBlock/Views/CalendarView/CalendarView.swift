@@ -11,7 +11,6 @@ import SwiftData
 
 struct CalendarView:View {
     
-    
     @Environment(\.modelContext) var context
     @Environment(\.dismiss) private var dismiss
     @State private var isModalPresented = false
@@ -21,18 +20,29 @@ struct CalendarView:View {
         
         NavigationView {
             VStack{
-                HStack {
-                    Spacer()
+                HStack (spacing: 20){
+                 Spacer()
+                    
                     NavigationLink {
-                        // 임시 뷰
-                        TempSheetView()
+                        SearchView()
                     } label: {
-                        Image(systemName: "list.bullet")
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 24,height: 24)
+                           
                     }
+                    
                     Button {
                         isModalPresented.toggle()
                     } label: {
-                        Image(systemName: "calendar.badge.plus")        }
+                        Image(systemName: "calendar.badge.plus")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 24,height: 24)
+                            
+                    }
+                    
                 }
                 .padding(.trailing)
                 .sheet(isPresented: $isModalPresented) {
@@ -42,7 +52,7 @@ struct CalendarView:View {
                 
                 VStack {
                     Spacer()
-                    CalendarModuleView()
+                    CalendarModuleViewController()
                     Spacer()
                 }
                 
