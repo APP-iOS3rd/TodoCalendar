@@ -12,6 +12,7 @@ import SwiftData
 final class Task: Identifiable {
     @Attribute(.unique) var id: UUID = UUID()
     var title: String
+//    var date: String
     @Relationship var category: Category?
     var completed: Bool
     @Relationship var time: Time?

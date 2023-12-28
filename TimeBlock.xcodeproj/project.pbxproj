@@ -36,6 +36,7 @@
 		525FE0342B33BF1600391E31 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0332B33BF1600391E31 /* TodoData.swift */; };
 		525FE0362B33CA4700391E31 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0352B33CA4700391E31 /* Task.swift */; };
 		525FE0382B33D64900391E31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0372B33D64900391E31 /* Category.swift */; };
+		52D8CB832B3C951F00E3381E /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8CB822B3C951F00E3381E /* DatePickerView.swift */; };
 		5A4AC3342B3BB3AE005A67CA /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC32E2B3BB3AD005A67CA /* TaskCellView.swift */; };
 		5A4AC3352B3BB3AE005A67CA /* TodoDeleteBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3302B3BB3AD005A67CA /* TodoDeleteBtn.swift */; };
 		5A4AC3362B3BB3AE005A67CA /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */; };
@@ -100,6 +101,7 @@
 		525FE0332B33BF1600391E31 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 		525FE0352B33CA4700391E31 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		525FE0372B33D64900391E31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		52D8CB822B3C951F00E3381E /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		5A4AC32E2B3BB3AD005A67CA /* TaskCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
 		5A4AC3302B3BB3AD005A67CA /* TodoDeleteBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDeleteBtn.swift; sourceTree = "<group>"; };
 		5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */,
 				5A4AC3322B3BB3AD005A67CA /* TodoCategoryView.swift */,
 				5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */,
+				52D8CB822B3C951F00E3381E /* DatePickerView.swift */,
 				5A4AC32F2B3BB3AD005A67CA /* UIElement */,
 			);
 			path = TodoDetailView;
@@ -493,6 +496,7 @@
 				01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */,
 				5A4AC3362B3BB3AE005A67CA /* TodoDetailView.swift in Sources */,
 				01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */,
+				52D8CB832B3C951F00E3381E /* DatePickerView.swift in Sources */,
 				5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */,
 				5A4AC3372B3BB3AE005A67CA /* TodoCategoryView.swift in Sources */,
 				016AD8142AFCD942006A98B9 /* CalendarView.swift in Sources */,
