@@ -16,6 +16,8 @@ struct CalendarView:View {
     @State private var isModalPresented = false
     @StateObject var calendarModule = CalendarModule()
     
+    @State var isDataOn: Bool = false
+    
     var body: some View {
         
         NavigationView {
@@ -46,7 +48,7 @@ struct CalendarView:View {
                 }
                 .padding(.trailing)
                 .sheet(isPresented: $isModalPresented) {
-                    AddTodoView(isModalPresented: self.$isModalPresented)
+                    AddTodoView(isModalPresented: self.$isModalPresented, isDataOn: self.$isDataOn)
                 }
                 
                 

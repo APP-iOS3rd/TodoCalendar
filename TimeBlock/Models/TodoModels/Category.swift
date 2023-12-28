@@ -13,6 +13,7 @@ final class Category: Identifiable {
     @Attribute(.unique) var id: UUID
     var name: String
     var color: String
+    var isSelected: Bool = false
     
     init(id: UUID = UUID(), name: String, color: String) {
         self.id = id
