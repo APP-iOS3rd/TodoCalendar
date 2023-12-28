@@ -14,9 +14,7 @@ struct AddCategoryView: View {
     
     var body: some View {
         NavigationView {
-            GeometryReader { geometry in
-                
-                
+            GeometryReader { geometry in                
                 Form {
                     Section(header: Text("카테고리 이름")) {
                         TextField("카테고리 이름을 입력해주세요", text: $categoryName)
@@ -39,8 +37,7 @@ struct AddCategoryView: View {
                         }
                     }
                 }
-            }
-            .navigationBarTitle("Add Category")
+            }        
         }
     }
     
