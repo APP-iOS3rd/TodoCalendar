@@ -7,35 +7,31 @@
 import SwiftUI
 
 struct CategoryDetailView: View {
-    var item: CategoryItem
+    @State var category: Category // Category 모델 사용
     @Environment(\.presentationMode) var presentationMode
-    @Binding var selectedColor: Color
+    @State var selectedColor: Color // 선택된 색상을 State로 관리
+    @State private var isEditingTitle = false
     
-    let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink, .gray, .brown, .cyan, .mint, .indigo, .teal,.green]
+    let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink, .gray, .brown, .cyan, .mint, .indigo, .teal, .green]
     
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
                 Form {
-                    Section{
+                    Section {
                         ColorSectionView(selectedColor: $selectedColor, colors: colors, geometry: geometry)
-                        HStack{
+                        HStack {
                             Circle()
-                                .fill(item.color)
+                                .fill(selectedColor)
                                 .frame(width: circleSize(geometry), height: circleSize(geometry))
-                                .overlay(
-                                    Circle()
-                                        .stroke(selectedColor == item.color ? Color.blue : Color.clear, lineWidth: 3)
-                                )
                                 .onTapGesture {
-                                    selectedColor = item.color
+                                    // 선택된 색상을 현재 카테고리의 색상으로 변경
+                                    selectedColor = Color(hex: category.color)
                                 }
                             
                             ColorPicker("", selection: $selectedColor)
                                 .labelsHidden()
-                            
                         }
-                        
                     }
                 }
             }
@@ -47,12 +43,25 @@ struct CategoryDetailView: View {
                             Circle()
                                 .fill(selectedColor)
                                 .frame(width: 30, height: 30)
-                            Text(item.title)
-                                .font(.largeTitle)
-                                .foregroundColor(item.color)
+                            if isEditingTitle {
+                                TextField("Enter Title", text: $category.name)
+                                    .padding(.all, 20)
+                                    .font(.largeTitle)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .onSubmit {
+                                        isEditingTitle = false
+                                    }
+                            } else {
+                                Text(category.name)
+                                    .font(.largeTitle)
+                                    .onTapGesture {
+                                        isEditingTitle = true
+                                    }
+                            }
                         }
                     }
                 }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         presentationMode.wrappedValue.dismiss()
@@ -63,16 +72,16 @@ struct CategoryDetailView: View {
                 }
             }
         }
+        .onAppear {
+            selectedColor = Color(hex: category.color)
+        }
     }
     
-    // GeometryReader를 사용하여 원의 크기 계산
     func circleSize(_ geometry: GeometryProxy) -> CGFloat {
         let width = geometry.size.width
-        // Form의 너비를 원의 개수로 나누어 각 원의 크기를 계산
-        return (width - 200) / 7 // 20은 HStack 내부의 총 간격
+        return (width - 200) / 7
     }
     
-    // Color를 HEX 문자열로 변환
     func colorToHex(_ color: Color) -> String {
         let uiColor = UIColor(color)
         var red: CGFloat = 0
@@ -82,11 +91,9 @@ struct CategoryDetailView: View {
         
         uiColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         
-        let hexString = String(format: "#%02lX%02lX%02lX",
-                               lroundf(Float(red) * 255),
-                               lroundf(Float(green) * 255),
-                               lroundf(Float(blue) * 255))
-        return hexString
+        return String(format: "#%02lX%02lX%02lX",
+                      lroundf(Float(red) * 255),
+                      lroundf(Float(green) * 255),
+                      lroundf(Float(blue) * 255))
     }
 }
-

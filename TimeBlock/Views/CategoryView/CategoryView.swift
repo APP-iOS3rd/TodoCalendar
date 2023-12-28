@@ -5,39 +5,24 @@
 //  Created by 김건호 on 12/21/23.
 //
 import SwiftUI
-
-struct CategoryItem: Identifiable {
-    let id: Int
-    let title: String
-    var color: Color
-    var isSelected: Bool = false
-}
+import SwiftData
 
 struct CategoryView: View {
-    @State private var items = [
-        CategoryItem(id: 1, title: "운동", color: .blue),
-        CategoryItem(id: 2, title: "집", color: .green),
-        CategoryItem(id: 3, title: "강의", color: .red),
-        CategoryItem(id: 4, title: "약속", color: .yellow),
-        CategoryItem(id: 5, title: "여행", color: .purple)
-    ]
-    
-    
+    @Query(sort: [SortDescriptor(\Category.id)]) var items: [Category]
+    @Query var toDoData: [ToDoData]
     @State private var showingAddView = false
-    @State private var selectedItem: CategoryItem?
+    @State private var selectedItem: Category?
     @State private var showingCategoryAddView = false
+    @Environment(\.modelContext) var context
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(items.indices, id: \.self) { index in
                     HStack {
-                        Image(systemName:"checkmark.circle.fill")
-                            .foregroundColor(items[index].color)
-                            .onTapGesture {
-                                items[index].isSelected.toggle()
-                            }
-                        Text(items[index].title)
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(Color(hex: items[index].color))
+                        Text(items[index].name)
                             .font(.title3)
                         Spacer()
                         Image(systemName: "info.circle")
@@ -47,10 +32,11 @@ struct CategoryView: View {
                             }
                     }
                 }
+                .onDelete(perform: deleteItem)
             }
             .sheet(item: $selectedItem, onDismiss: nil) { item in
                 if let index = items.firstIndex(where: { $0.id == item.id }) {
-                    CategoryDetailView(item: item, selectedColor: $items[index].color)
+                    CategoryDetailView(category: item, selectedColor: Color(hex: item.color))
                         .presentationDetents([.medium])
                         .presentationDragIndicator(.visible)
                 }
@@ -69,11 +55,29 @@ struct CategoryView: View {
             }
         }
     }
-    
-}
 
+    func canDeleteCategory(_ category: Category) -> Bool {
+        !toDoData.contains { todo in
+            todo.task.contains { task in
+                task.category == category
+            }
+        }
+    }
 
+    func deleteItem(at offsets: IndexSet) {
+        offsets.forEach { index in
+            let categoryToDelete = items[index]
+            if canDeleteCategory(categoryToDelete) {
+                context.delete(categoryToDelete)
+            } else {
+                
+            }
+        }
 
-#Preview {
-    CategoryView()
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context after deleting category: \(error)")
+        }
+    }
 }
