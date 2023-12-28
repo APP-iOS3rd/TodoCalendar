@@ -10,19 +10,17 @@ import SwiftData
 
 struct TodoListView: View {
     @Binding var date: Date
-    @Query var toDoData: [ToDoData]
+    @Query var tasks: [Task]
                                 
     var body: some View {
         NavigationStack {
             List{
-                ForEach(toDoData, id: \.self) { todo in
-                    if todo.date == date.dateToString {
-                        ForEach(todo.task, id: \.self) { task in
-                            TaskCellView(task: task, date: self.date)
-                                .listRowInsets(EdgeInsets())
-                                .listRowSeparator(.hidden)
-                                .padding(.bottom, 20)
-                        }
+                ForEach(tasks, id: \.self) { task in
+                    if let taskDate = task.date, taskDate == self.date.dateToString {
+                        TaskCellView(task: task, date: self.date)
+                            .listRowInsets(EdgeInsets())
+                            .listRowSeparator(.hidden)
+                            .padding(.bottom, 20)
                     }
                 }
             }

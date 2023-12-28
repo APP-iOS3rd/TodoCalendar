@@ -22,8 +22,3 @@ struct DatePickerView: View {
     
     }
 }
-
-//#Preview {
-//    let date = Date()
-//    DatePickerView(date: $date)
-//}

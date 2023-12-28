@@ -10,7 +10,6 @@ import SwiftData
 
 struct TodoDeleteBtn: View {
     @Environment(\.modelContext) var modelContext
-    @Query var todoData: [ToDoData]    
     @Binding var isShownSheet: Bool
     var task: Task
     var date: Date
@@ -18,10 +17,7 @@ struct TodoDeleteBtn: View {
     var body: some View {
         Button {
             isShownSheet = false
-            todoData
-                .filter({$0.date == self.date.dateToString})
-                .first?
-                .deleteTask(self.task)
+            modelContext.delete(self.task)
         } label: {
             Image(systemName: "trash")
         }
