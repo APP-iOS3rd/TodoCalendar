@@ -30,6 +30,8 @@
 		01D7AD912B32FE1C0097410D /* Pods_TimeBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; };
 		01D7AD922B32FE1C0097410D /* Pods_TimeBlock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01D7AD992B33025B0097410D /* CalendarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7AD982B33025B0097410D /* CalendarModule.swift */; };
+		1D40EA202B3C0A0F005E981E /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D40EA1F2B3C0A0F005E981E /* AddCategoryView.swift */; };
+		1D81E2B12B3CFC20001448C1 /* ColorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81E2B02B3CFC20001448C1 /* ColorSectionView.swift */; };
 		5208FA4A2B3AE227000F7B3A /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208FA492B3AE227000F7B3A /* Time.swift */; };
 		525FE0342B33BF1600391E31 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0332B33BF1600391E31 /* TodoData.swift */; };
 		525FE0362B33CA4700391E31 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE0352B33CA4700391E31 /* Task.swift */; };
@@ -91,6 +93,8 @@
 		01D7AD862B31872C0097410D /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		01D7AD8B2B319E1E0097410D /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		01D7AD982B33025B0097410D /* CalendarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModule.swift; sourceTree = "<group>"; };
+		1D40EA1F2B3C0A0F005E981E /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		1D81E2B02B3CFC20001448C1 /* ColorSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSectionView.swift; sourceTree = "<group>"; };
 		22385BC8115A4FFBA8AB07D9 /* Pods_TimeBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5208FA492B3AE227000F7B3A /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		525FE0332B33BF1600391E31 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 			children = (
 				5AB52A202B3A5A5900B2274C /* CategoryView.swift */,
 				5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */,
+				1D40EA1F2B3C0A0F005E981E /* AddCategoryView.swift */,
+				1D81E2B02B3CFC20001448C1 /* ColorSectionView.swift */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -483,12 +489,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D81E2B12B3CFC20001448C1 /* ColorSectionView.swift in Sources */,
 				01D7AD282B2ED8D70097410D /* Font+Extensions.swift in Sources */,
 				5A4AC3362B3BB3AE005A67CA /* TodoDetailView.swift in Sources */,
 				01D7AD372B2F05DA0097410D /* ViewRouter.swift in Sources */,
 				5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */,
 				5A4AC3372B3BB3AE005A67CA /* TodoCategoryView.swift in Sources */,
 				016AD8142AFCD942006A98B9 /* CalendarView.swift in Sources */,
+				1D40EA202B3C0A0F005E981E /* AddCategoryView.swift in Sources */,
 				5A4AC3342B3BB3AE005A67CA /* TaskCellView.swift in Sources */,
 				525FE0362B33CA4700391E31 /* Task.swift in Sources */,
 				5AEDABED2B340CBA00FD8598 /* SelectCategorySheetCellCircle.swift in Sources */,
