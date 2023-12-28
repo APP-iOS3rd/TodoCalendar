@@ -66,26 +66,26 @@ class CalendarModule: UIViewController, FSCalendarDelegate, ObservableObject{
 extension CalendarModule: FSCalendarDataSource{
    
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale.init(identifier: "ko_KR")
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-   
-//        for event in events {
-//            if event.date.contains(date.dateToString){
+//        
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.locale = Locale.init(identifier: "ko_KR")
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//   
+////        for event in events {
+////            if event.date.contains(date.dateToString){
+////                return 1
+////            }
+////        }
+//        for dateStr in eventsSample {
+//            if(dateFormatter.string(from: date) == dateStr){
 //                return 1
 //            }
 //        }
-        for dateStr in eventsSample {
-            if(dateFormatter.string(from: date) == dateStr){
-                return 1
-            }
-        }
-        for dateStr in eventsSampleDone {
-            if(dateFormatter.string(from: date) == dateStr){
-                return 1
-            }
-        }
+//        for dateStr in eventsSampleDone {
+//            if(dateFormatter.string(from: date) == dateStr){
+//                return 1
+//            }
+//        }
         return 0
     }
 }
