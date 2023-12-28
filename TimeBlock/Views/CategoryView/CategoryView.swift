@@ -68,8 +68,6 @@ struct CategoryView: View {
                 AddCategoryView()
             }
         }
-        
-        
     }
     
 }

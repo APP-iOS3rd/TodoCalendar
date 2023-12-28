@@ -52,7 +52,6 @@
 		5AEDABF32B34178600FD8598 /* AddToDoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */; };
 		5AEDAC4F2B35288D00FD8598 /* AddTodoSaveBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDAC4E2B35288D00FD8598 /* AddTodoSaveBtn.swift */; };
 		5AEDACC92B36BF8100FD8598 /* AddToDoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDACC82B36BF8100FD8598 /* AddToDoVM.swift */; };
-		5AEDACCB2B36C03D00FD8598 /* TempSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDACCA2B36C03D00FD8598 /* TempSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,7 +117,6 @@
 		5AEDABF22B34178600FD8598 /* AddToDoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoTextField.swift; sourceTree = "<group>"; };
 		5AEDAC4E2B35288D00FD8598 /* AddTodoSaveBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoSaveBtn.swift; sourceTree = "<group>"; };
 		5AEDACC82B36BF8100FD8598 /* AddToDoVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToDoVM.swift; sourceTree = "<group>"; };
-		5AEDACCA2B36C03D00FD8598 /* TempSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempSheetView.swift; sourceTree = "<group>"; };
 		843E9546D0EFF3BE40E24F03 /* Pods-TimeBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.debug.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA4F12F944747D64AD20E84 /* Pods-TimeBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeBlock.release.xcconfig"; path = "Target Support Files/Pods-TimeBlock/Pods-TimeBlock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,10 +272,10 @@
 		5A4AC32D2B3BB3AD005A67CA /* TodoDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */,
 				5A4AC32E2B3BB3AD005A67CA /* TaskCellView.swift */,
 				5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */,
 				5A4AC3322B3BB3AD005A67CA /* TodoCategoryView.swift */,
-				5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */,
 				52D8CB822B3C951F00E3381E /* DatePickerView.swift */,
 				5A4AC32F2B3BB3AD005A67CA /* UIElement */,
 			);
@@ -337,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				5AEDABEA2B340CBA00FD8598 /* AddTodoView.swift */,
-				5AEDACCA2B36C03D00FD8598 /* TempSheetView.swift */,
 				5AEDABE42B340CBA00FD8598 /* SelectCategorySheetView.swift */,
 			);
 			path = Views;
@@ -524,7 +521,6 @@
 				5AEDABEC2B340CBA00FD8598 /* SelectCategorySheetView.swift in Sources */,
 				5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */,
 				5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */,
-				5AEDACCB2B36C03D00FD8598 /* TempSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

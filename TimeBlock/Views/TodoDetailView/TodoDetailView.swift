@@ -34,7 +34,7 @@ struct TodoDetailView: View {
                     TextField("일정 제목", text: $task.title)
                         .font(.system(size: 29, weight: .bold))
                                                         
-                    Text(date.dateToString)
+                    Text(date.dateToString )
                         .font(.system(size: 18, weight: .semibold))
                         .onTapGesture {
                             print("taping")
@@ -43,6 +43,12 @@ struct TodoDetailView: View {
                         .sheet(isPresented: $showDateSheet) {
                             DatePickerView(date: $date, showDateSheet: $showDateSheet)
                         }
+                    
+                    Button {
+                        task.setDate(date.dateToString)
+                    } label: {
+                        Text("저장하기")
+                    }
                     
                     Spacer()
                 }
