@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct CategoryDetailView: View {
-    var item: CategoryItem    
+    var item: CategoryItem
     @Environment(\.presentationMode) var presentationMode
     @Binding var selectedColor: Color
     
@@ -18,41 +18,21 @@ struct CategoryDetailView: View {
             GeometryReader { geometry in
                 Form {
                     Section{
-                        VStack {
-                            // 첫 번째 줄의 원형들
-                            HStack(spacing: 20) {
-                                ForEach(colors.prefix(7), id: \.self) { color in
-                                    Circle()
-                                        .fill(color)
-                                        .frame(width: circleSize(geometry), height: circleSize(geometry))
-                                        .onTapGesture {
-                                            selectedColor = color
-                                        }
-                                }
-                            }
-                            // 두 번째 줄의 원형들
-                            HStack(spacing: 20) {
-                                ForEach(colors.dropFirst(7), id: \.self) { color in
-                                    Circle()
-                                        .fill(color)
-                                        .frame(width: circleSize(geometry), height: circleSize(geometry))
-                                        .onTapGesture {
-                                            selectedColor = color
-                                        }
-                                }
-                            }
-                        }
-                        
+                        ColorSectionView(selectedColor: $selectedColor, colors: colors, geometry: geometry)
                         HStack{
                             Circle()
                                 .fill(item.color)
                                 .frame(width: circleSize(geometry), height: circleSize(geometry))
+                                .overlay(
+                                    Circle()
+                                        .stroke(selectedColor == item.color ? Color.blue : Color.clear, lineWidth: 3)
+                                )
                                 .onTapGesture {
                                     selectedColor = item.color
                                 }
+                            
                             ColorPicker("", selection: $selectedColor)
                                 .labelsHidden()
-                                .presentationDetents([.large])
                             
                         }
                         
@@ -61,13 +41,16 @@ struct CategoryDetailView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    HStack {
-                        Circle()
-                            .fill(selectedColor)
-                            .frame(width: 30, height: 30)
-                        Text(item.title)
-                            .font(.largeTitle)
-                            .foregroundColor(item.color)
+                    VStack {
+                        Spacer().frame(height: 30)
+                        HStack {
+                            Circle()
+                                .fill(selectedColor)
+                                .frame(width: 30, height: 30)
+                            Text(item.title)
+                                .font(.largeTitle)
+                                .foregroundColor(item.color)
+                        }
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {

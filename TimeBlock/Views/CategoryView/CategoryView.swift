@@ -25,13 +25,14 @@ struct CategoryView: View {
     
     @State private var showingAddView = false
     @State private var selectedItem: CategoryItem?
+    @State private var showingCategoryAddView = false
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(items.indices, id: \.self) { index in
                     HStack {
-                        Image(systemName: items[index].isSelected ? "checkmark.circle.fill" : "circle")
+                        Image(systemName:"checkmark.circle.fill")
                             .foregroundColor(items[index].color)
                             .onTapGesture {
                                 items[index].isSelected.toggle()
@@ -54,6 +55,18 @@ struct CategoryView: View {
                         .presentationDragIndicator(.visible)
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showingCategoryAddView = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showingCategoryAddView) {
+                AddCategoryView()
+            }
         }
         
         
@@ -63,6 +76,6 @@ struct CategoryView: View {
 
 
 
-//#Preview {
-//    CategoryView()
-//}
+#Preview {
+    CategoryView()
+}
