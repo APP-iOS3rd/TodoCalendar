@@ -13,7 +13,6 @@ struct CategoryDetailView: View {
     @State private var isEditingTitle = false
     
     let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink, .gray, .brown, .cyan, .mint, .indigo, .teal, .green]
-    
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
