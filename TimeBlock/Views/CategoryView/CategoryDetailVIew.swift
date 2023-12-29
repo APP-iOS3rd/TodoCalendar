@@ -24,12 +24,14 @@ struct CategoryDetailView: View {
                                 .fill(selectedColor)
                                 .frame(width: circleSize(geometry), height: circleSize(geometry))
                                 .onTapGesture {
-                                    // 선택된 색상을 현재 카테고리의 색상으로 변경
                                     selectedColor = Color(hex: category.color)
+                                    
                                 }
-                            
                             ColorPicker("", selection: $selectedColor)
                                 .labelsHidden()
+                                .onChange(of: selectedColor) { newColor in
+                                    category.color = newColor.colorToHex
+                                }
                         }
                     }
                 }
