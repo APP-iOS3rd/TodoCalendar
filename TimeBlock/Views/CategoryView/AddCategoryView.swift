@@ -10,6 +10,7 @@ struct AddCategoryView: View {
     @State private var categoryName: String = ""
     @State private var selectedColor: Color = .red
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.modelContext) var context
     let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink, .gray, .brown, .cyan, .mint, .indigo, .teal, .green]
     
     var body: some View {
@@ -44,7 +45,7 @@ struct AddCategoryView: View {
     // 카테고리 추가
     func addNewCategory() {
         let colorString = colorToHex(selectedColor)
-        let newCategory = Category(name: categoryName, color: colorString)
+        context.insert(Category(name: categoryName, color: colorString))
         
     }
     

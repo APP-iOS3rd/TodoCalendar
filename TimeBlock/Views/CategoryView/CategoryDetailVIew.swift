@@ -80,19 +80,4 @@ struct CategoryDetailView: View {
         let width = geometry.size.width
         return (width - 200) / 7
     }
-    
-    func colorToHex(_ color: Color) -> String {
-        let uiColor = UIColor(color)
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
-        
-        uiColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        
-        return String(format: "#%02lX%02lX%02lX",
-                      lroundf(Float(red) * 255),
-                      lroundf(Float(green) * 255),
-                      lroundf(Float(blue) * 255))
-    }
 }
