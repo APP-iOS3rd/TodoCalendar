@@ -27,7 +27,6 @@ struct CalendarView:View {
             VStack{
                 HStack (spacing: 20){
                  Spacer()
-                    
                     NavigationLink {
                         SearchView()
                     } label: {
