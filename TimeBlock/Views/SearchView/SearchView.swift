@@ -33,23 +33,30 @@ struct SearchView: View {
         }
     }
     
+    // 날짜별로 Task를 그룹화하는 계산 속성
+    var groupedTasks: [String: [Task]] {
+        Dictionary(grouping: filteredDatas, by: { $0.date ?? "" })
+    }
+    
     var body: some View {
-        List(filteredDatas){ data in
-            Section{
-                VStack{
-                    Text(data.title)
-                    Text(data.category?.name ?? "없음")
+        List {
+            ForEach(groupedTasks.keys.sorted(), id: \.self) { date in
+                Section(header: Text(date)) {
+                    ForEach(groupedTasks[date] ?? [], id: \.self) { task in
+                        VStack {
+                            Text(task.title)
+                            Text(task.category?.name ?? "없음")
+                        }
+                    }
                 }
-            } header: {
-                Text(data.date ?? "")
             }
- 
         }
         .searchable(text: $searchText)
+        
     }
 }
 
- 
+
 #Preview {
     SearchView()
 }
