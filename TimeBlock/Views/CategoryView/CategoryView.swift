@@ -12,18 +12,20 @@ struct CategoryView: View {
     @Query var toDoData: [ToDoData]
     @State private var showingAddView = false
     @State private var selectedItem: Category?
+    @State private var selectedCategory: Category?
     @State private var showingCategoryAddView = false
+    @Environment(\.presentationMode) var presentationMode
     @Environment(\.modelContext) var context
     @Binding var task: Task
 
     var body: some View {
         NavigationStack {
             List {
-                ForEach(items.indices, id: \.self) { index in
+                ForEach(items, id: \.self) { category in
                     HStack {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundColor(Color(hex: items[index].color))
-                        Text(items[index].name)
+                        Image(systemName: selectedCategory == category ? "checkmark.circle.fill" : "circle")
+                            .foregroundColor(Color(hex: category.color))
+                        Text(category.name)
                             .font(.title3)
                         Spacer()
                         Image(systemName: "info.circle")
@@ -32,7 +34,9 @@ struct CategoryView: View {
                             }
                     }
                     .onTapGesture {
-                        self.task.category = items[index]
+                        self.task.category = category
+                        self.selectedCategory = category
+                        presentationMode.wrappedValue.dismiss()
                     }
                 }
                 .onDelete(perform: deleteItem)
@@ -56,6 +60,9 @@ struct CategoryView: View {
             .sheet(isPresented: $showingCategoryAddView) {
                 AddCategoryView()
             }
+        }
+        .onAppear {
+            self.selectedCategory = self.task.category
         }
     }
 

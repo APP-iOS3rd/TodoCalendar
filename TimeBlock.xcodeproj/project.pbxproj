@@ -42,7 +42,6 @@
 		5A4AC3362B3BB3AE005A67CA /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */; };
 		5A4AC3372B3BB3AE005A67CA /* TodoCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3322B3BB3AD005A67CA /* TodoCategoryView.swift */; };
 		5A4AC3382B3BB3AE005A67CA /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */; };
-		5A8A67B82B42D74300D03853 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A67B72B42D74300D03853 /* CategoryCell.swift */; };
 		5AB52A222B3A5A5900B2274C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB52A202B3A5A5900B2274C /* CategoryView.swift */; };
 		5AB52A232B3A5A5900B2274C /* CategoryDetailVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */; };
 		5AEDABEC2B340CBA00FD8598 /* SelectCategorySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDABE42B340CBA00FD8598 /* SelectCategorySheetView.swift */; };
@@ -107,7 +106,6 @@
 		5A4AC3312B3BB3AD005A67CA /* TodoDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 		5A4AC3322B3BB3AD005A67CA /* TodoCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoCategoryView.swift; sourceTree = "<group>"; };
 		5A4AC3332B3BB3AD005A67CA /* TodoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
-		5A8A67B72B42D74300D03853 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		5AB52A202B3A5A5900B2274C /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailVIew.swift; sourceTree = "<group>"; };
 		5AEDABBB2B33BF5300FD8598 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 				5AB52A212B3A5A5900B2274C /* CategoryDetailVIew.swift */,
 				1D40EA1F2B3C0A0F005E981E /* AddCategoryView.swift */,
 				1D81E2B02B3CFC20001448C1 /* ColorSectionView.swift */,
-				5A8A67B72B42D74300D03853 /* CategoryCell.swift */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -524,7 +521,6 @@
 				5AEDABEC2B340CBA00FD8598 /* SelectCategorySheetView.swift in Sources */,
 				5AEDABEF2B340CBA00FD8598 /* SelectCategoryBtn.swift in Sources */,
 				5AEDABEE2B340CBA00FD8598 /* SelectCategorySheetCell.swift in Sources */,
-				5A8A67B82B42D74300D03853 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,8 +24,7 @@ struct CategoryDetailView: View {
                                 .fill(selectedColor)
                                 .frame(width: circleSize(geometry), height: circleSize(geometry))
                                 .onTapGesture {
-                                    selectedColor = Color(hex: category.color)
-                                    
+                                    selectedColor = Color(hex: category.color)                                    
                                 }
                             ColorPicker("", selection: $selectedColor)
                                 .labelsHidden()
