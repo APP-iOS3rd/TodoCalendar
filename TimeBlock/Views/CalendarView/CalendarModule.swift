@@ -84,7 +84,6 @@ struct CalendarModule: UIViewRepresentable {
                        FSCalendarDataSource {
          
         var parent: CalendarModule
-       // @Published var selectedDate: Date = Date()
         
         init(_ parent: CalendarModule) {
             self.parent = parent

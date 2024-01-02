@@ -16,9 +16,7 @@ struct CalendarView:View {
     @State private var isModalPresented = false
 
     @State var isDataOn: Bool = false
-    @State var selectedDate : Date = Date()
-  //  @StateObject var calendarModule: CalendarModule.Coordinator
-   // @EnvironmentObject var calenderModule: CalendarModule.Coordinator
+    @State var selectedDate : Date = Date() 
 
     var body: some View {
         
