@@ -54,7 +54,7 @@ struct CalendarView:View {
                 
                 VStack {
                     Spacer()
-                    CalendarModuleViewController()
+                    CalendarModuleViewController(selectedDate: $calendarModule.selectedDate)
                     Spacer()
                 }
                 
