@@ -22,13 +22,9 @@ struct AddCategoryView: View {
                     }
                     
                     Section(header: Text("색상 추가")) {
-                        
-                            ColorSectionView(selectedColor: $selectedColor, colors: colors, geometry: geometry)
-                            ColorPicker("", selection: $selectedColor)
-                                .labelsHidden()
-                            
-                        
-                        
+                        ColorSectionView(selectedColor: $selectedColor, colors: colors, geometry: geometry)
+                        ColorPicker("", selection: $selectedColor)
+                            .labelsHidden()
                     }
                     
                     Section {
@@ -38,7 +34,7 @@ struct AddCategoryView: View {
                         }
                     }
                 }
-            }        
+            }
         }
     }
     
