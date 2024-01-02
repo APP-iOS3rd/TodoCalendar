@@ -14,6 +14,7 @@ struct CategoryView: View {
     @State private var selectedItem: Category?
     @State private var showingCategoryAddView = false
     @Environment(\.modelContext) var context
+    @Binding var task: Task
 
     var body: some View {
         NavigationStack {
@@ -27,9 +28,11 @@ struct CategoryView: View {
                         Spacer()
                         Image(systemName: "info.circle")
                             .onTapGesture {
-                                selectedItem = items[index]
                                 showingAddView = true
                             }
+                    }
+                    .onTapGesture {
+                        self.task.category = items[index]
                     }
                 }
                 .onDelete(perform: deleteItem)

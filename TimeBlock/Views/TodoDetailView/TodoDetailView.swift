@@ -22,7 +22,7 @@ struct TodoDetailView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 22) {
                     HStack {
-                        TodoCategoryView(category: task.category)
+                        TodoCategoryView(task: self.$task)
                             .padding(.top, 20)
                                                     
                         Spacer()
