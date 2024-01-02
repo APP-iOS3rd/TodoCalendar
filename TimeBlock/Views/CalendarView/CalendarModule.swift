@@ -70,7 +70,10 @@ struct CalendarModule: UIViewRepresentable {
         return calendar
     }
 
-    func updateUIView(_ uiView: FSCalendar, context: Context) {}
+    func updateUIView(_ uiView: FSCalendar, context: Context) {
+        
+        uiView.reloadData()
+    }
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -81,7 +84,7 @@ struct CalendarModule: UIViewRepresentable {
                        FSCalendarDataSource {
          
         var parent: CalendarModule
-        @Published var selectedDate: Date = Date()
+       // @Published var selectedDate: Date = Date()
         
         init(_ parent: CalendarModule) {
             self.parent = parent

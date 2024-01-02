@@ -15,12 +15,12 @@ struct CalendarView:View {
     @Environment(\.dismiss) private var dismiss
     @State private var isModalPresented = false
     
-   // @ObservedObject var calendarModule = CalendarModule()
-    //@EnvironmentObject var calendarModule: CalendarModule.Coordinator
+    
     @State var isDataOn: Bool = false
     @State var selectedDate : Date = Date()
-    
- 
+  //  @StateObject var calendarModule: CalendarModule.Coordinator
+   // @EnvironmentObject var calenderModule: CalendarModule.Coordinator
+
     var body: some View {
         
         NavigationView {
@@ -67,10 +67,10 @@ struct CalendarView:View {
                 Spacer()
                 
             }
+            //.environmentObject(c)
             .environmentObject(CalendarModule.Coordinator(CalendarModule(selectedDate: $selectedDate)))
-            
-          //  .environment(calendarModule)
-            //.environmentObject(CalendarModule.Coordinator(calendarModule))
+            //.environment(calenderModule)
+
         }
         
     }
