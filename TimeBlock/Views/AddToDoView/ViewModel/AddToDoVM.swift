@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 class AddToDoVM: ObservableObject{
-    @EnvironmentObject var calenderModule: CalendarModule
+    @EnvironmentObject var calenderModule: CalendarModule.Coordinator
     @Published var selectedCategory: Category?
     @Published var title: String = ""
     var date: String = ""

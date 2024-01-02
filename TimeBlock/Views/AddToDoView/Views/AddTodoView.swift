@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct AddTodoView: View {
-    @EnvironmentObject var calendarModule: CalendarModule
+    
+    @EnvironmentObject var calendarModule: CalendarModule.Coordinator
     @StateObject var addToDoVM = AddToDoVM()
     @Binding var isModalPresented: Bool
     
@@ -30,7 +31,7 @@ struct AddTodoView: View {
             AddToDoTextField(content: $addToDoVM.title)
             
             HStack{
-                Text("\(calendarModule.selectedDate.dateToString)")
+                Text("\(calendarModule.parent.selectedDate.dateToString)")
                     .font(.bold18)
                 Spacer()
             }
@@ -45,7 +46,7 @@ struct AddTodoView: View {
         }
         .padding(20)
         .onAppear() {
-            addToDoVM.setDate(calendarModule.selectedDate.dateToString)
+            addToDoVM.setDate(calendarModule.parent.selectedDate.dateToString)
             if !isDataOn {
                 isDataOn = true
                 context.insert(Category(name: "할일1", color: "ff7373"))

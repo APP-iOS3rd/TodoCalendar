@@ -9,32 +9,48 @@ import Foundation
 import SwiftUI
 import SwiftData
 import FSCalendar
-
-class CalendarModule: UIViewController, FSCalendarDelegate, ObservableObject, FSCalendarDataSource{
+ 
+struct CalendarModule: UIViewRepresentable {
+     
+    typealias UIViewType = FSCalendar
     var calendar = FSCalendar()
-   
-    @Published var selectedDate: Date = Date()
+    
+    @Binding var selectedDate: Date
+    @Query var tasks: [Task]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        calendar.delegate = self
-        calendar.dataSource = self
+    func updateEvent() -> [String] {
+        var eventDays: [String] = []
+        
+        for task in tasks {
+            eventDays.append(task.date ?? "")
+        }
+        
+        return eventDays
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        initCalendar()
-        view.addSubview(calendar)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // print(#function)
-
-    }
-    private func initCalendar(){
-        calendar.locale = Locale(identifier: "ko_KR")
+    func isEvent(date: Date) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.dateFormat = "yyyy년 MM월 dd일 (E)"
         
-        calendar.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width)
+        let events = updateEvent()
+        
+        for event in events {
+            let day: String = dateFormatter.string(from: date)
+            if day == event {
+                return true
+            }
+        }
+        
+        return false
+        
+    }
+    func makeUIView(context: Context) -> FSCalendar {
+        
+        calendar.delegate = context.coordinator
+        calendar.dataSource = context.coordinator
+        
+        calendar.locale = Locale(identifier: "ko_KR")
         calendar.appearance.headerDateFormat = "YYYY년 MM월"
        // calendar.appearance.headerTitleAlignment = .left
         calendar.appearance.headerTitleFont = UIFont(name: "Pretendard-ExtraBold", size: 24)
@@ -50,83 +66,63 @@ class CalendarModule: UIViewController, FSCalendarDelegate, ObservableObject, FS
         calendar.appearance.eventDefaultColor = UIColor.green
         calendar.appearance.eventSelectionColor = UIColor.green
 
-    }
-    
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        // 한국 시간 기준 date 출력
-        self.selectedDate = date // 선택된 날짜 업데이트
-    }
-    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        print(date)
         
-//        if isWeekend(date: date) {
-//            return 1
-//        }
+        return calendar
+    }
 
-        return 0
-    }
-}
- 
-struct CalendarModuleViewController: UIViewControllerRepresentable {
-    typealias UIViewControllerType = UIViewController
-    
-    @EnvironmentObject var calendarModule: CalendarModule
-    
-    @Binding var selectedDate: Date
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<CalendarModuleViewController>) -> UIViewController {
-        let viewController = calendarModule
-        return viewController
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<CalendarModuleViewController>) {
-    }
-    
+    func updateUIView(_ uiView: FSCalendar, context: Context) {}
+
     func makeCoordinator() -> Coordinator {
-        return Coordinator(self)
+        Coordinator(self)
     }
-    
-    
-    final class Coordinator: NSObject, FSCalendarDelegate,FSCalendarDataSource {
-        private var parent: CalendarModuleViewController
+  
+    class Coordinator: NSObject, ObservableObject,
+          FSCalendarDelegate,
+                       FSCalendarDataSource {
+         
+        var parent: CalendarModule
+        @Published var selectedDate: Date = Date()
         
-        init (_ parent: CalendarModuleViewController) {
+        init(_ parent: CalendarModule) {
             self.parent = parent
         }
-        
-        
+
         func calendar(_ calendar: FSCalendar,
                       didSelect date: Date,
                       at monthPosition: FSCalendarMonthPosition) {
             parent.selectedDate = date
         }
 
+        func calendar(_ calendar: FSCalendar,
+                  imageFor date: Date) -> UIImage? {
+//            if isWeekend(date: date) {
+//                return UIImage(systemName: "sparkles")
+//            }
+            return nil
+        }
+
+        func calendar(_ calendar: FSCalendar,
+                      numberOfEventsFor date: Date) -> Int {
+            var eventCount = 0
+            if parent.isEvent(date: date) {
+                eventCount += 1
+            }
+            return eventCount
+        }
+
+//        func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
+//            if isWeekend(date: date) {
+//                return false
+//            }
+//            return true
+//        }
+
+//        func maximumDate(for calendar: FSCalendar) -> Date {
+//            Date.now.addingTimeInterval(86400 * 30)
+//        }
+//
+//        func minimumDate(for calendar: FSCalendar) -> Date {
+//            Date.now.addingTimeInterval(-86400 * 30)
+//        }
     }
-    
 }
-
-func isEvent(date: Date) -> Bool {
-    // data 가져오기
-    
-    
-    return false
-    
-}
-
-
-func isWeekend(date: Date) -> Bool {
-    let dateFormatter = DateFormatter()
-    dateFormatter.locale = Locale(identifier: "ko_KR")
-    dateFormatter.dateFormat = "E"
-    //print(dateFormatter)
-    let day: String = dateFormatter.string(from: date)
-   
-    if day == "토" || day == "일" {
-        return true
-    }
-    return false
-}
-
- 
- 
-
