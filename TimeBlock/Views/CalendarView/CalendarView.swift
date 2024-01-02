@@ -14,8 +14,7 @@ struct CalendarView:View {
     @Environment(\.modelContext) var context
     @Environment(\.dismiss) private var dismiss
     @State private var isModalPresented = false
-    
-    
+
     @State var isDataOn: Bool = false
     @State var selectedDate : Date = Date()
   //  @StateObject var calendarModule: CalendarModule.Coordinator
@@ -69,8 +68,6 @@ struct CalendarView:View {
             }
             //.environmentObject(c)
             .environmentObject(CalendarModule.Coordinator(CalendarModule(selectedDate: $selectedDate)))
-            //.environment(calenderModule)
-
         }
         
     }
