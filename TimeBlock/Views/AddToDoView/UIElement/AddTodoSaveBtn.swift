@@ -13,10 +13,10 @@ struct AddTodoSaveBtn: View {
     @Query var todoData: [ToDoData]
     @StateObject var addToDoVM: AddToDoVM
     @Binding var isModalPresented: Bool
+    @State var showingAlert = false
         
     var body: some View {
         Button {
-            isModalPresented.toggle()
             saveTodo()
         } label: {
             HStack {
@@ -34,22 +34,22 @@ struct AddTodoSaveBtn: View {
         .frame(height: 50)
         .background(.black)
         .cornerRadius(33)
+        .alert(isPresented: $showingAlert) {
+                    Alert(title: Text("카테고리 미선택"), message: Text("카테고리를 선택해 주세요!"), dismissButton: .default(Text("확인")))
+                }
     }
 }
 
 extension AddTodoSaveBtn {
     func saveTodo() {
-        guard let category = addToDoVM.selectedCategory else { return }
-        let task = Task(title: addToDoVM.title,date: addToDoVM.date, category: category, completed: false, time: Time())
-        
-        modelContext.insert(task)
-        
-//        if let filtered = todoData.filter({ $0.date == addToDoVM.date}).first {
-//            filtered.addTask(task)
-//        } else {
-//            let todoData = ToDoData(date: addToDoVM.date)
-//            todoData.addTask(task)
-//            modelContext.insert(todoData)
-//        }
+        if let category = addToDoVM.selectedCategory {
+            self.isModalPresented.toggle()
+            let task = Task(title: addToDoVM.title,date: addToDoVM.date, category: category, completed: false, time: Time())
+            
+            modelContext.insert(task)
+        } else {
+            showingAlert = true
+            return
+        }
     }
 }
