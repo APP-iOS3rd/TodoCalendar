@@ -21,6 +21,8 @@ struct TaskCellView: View {
                     .padding()
                     .foregroundColor(.white)
                 Spacer()
+                TodoCompleteBtn(task: self.$task)
+                    .padding()
             }
         }
         .sheet(isPresented: $isShownSheet) {

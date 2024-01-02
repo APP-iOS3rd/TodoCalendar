@@ -15,7 +15,6 @@ struct CalendarView:View {
     @Environment(\.dismiss) private var dismiss
     @State private var isModalPresented = false
     @StateObject var calendarModule = CalendarModule()
-    
     @State var isDataOn: Bool = false
     
     var body: some View {
@@ -24,7 +23,6 @@ struct CalendarView:View {
             VStack{
                 HStack (spacing: 20){
                  Spacer()
-                    
                     NavigationLink {
                         SearchView()
                     } label: {

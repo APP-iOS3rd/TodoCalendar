@@ -15,7 +15,7 @@ struct TodoListView: View {
     var body: some View {
         NavigationStack {
             List{
-                ForEach(tasks, id: \.self) { task in
+                ForEach(tasks.sorted {(lhs, rhs) in return !lhs.completed && rhs.completed}, id: \.self) { task in
                     if let taskDate = task.date, taskDate == self.date.dateToString {
                         TaskCellView(task: task, date: self.date)
                             .listRowInsets(EdgeInsets())
