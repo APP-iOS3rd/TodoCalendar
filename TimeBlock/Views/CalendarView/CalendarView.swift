@@ -14,9 +14,7 @@ struct CalendarView:View {
     @Environment(\.modelContext) var context
     @Environment(\.dismiss) private var dismiss
     @State private var isModalPresented = false
-    
-   // @ObservedObject var calendarModule = CalendarModule()
-    //@EnvironmentObject var calendarModule: CalendarModule.Coordinator
+
     @State var isDataOn: Bool = false
     @State var selectedDate : Date = Date()
     
@@ -27,7 +25,6 @@ struct CalendarView:View {
             VStack{
                 HStack (spacing: 20){
                  Spacer()
-                    
                     NavigationLink {
                         SearchView()
                     } label: {
@@ -69,9 +66,6 @@ struct CalendarView:View {
                 
             }
             .environmentObject(CalendarModule.Coordinator(CalendarModule(selectedDate: $selectedDate)))
-            
-          //  .environment(calendarModule)
-            //.environmentObject(CalendarModule.Coordinator(calendarModule))
         }
         
     }

@@ -46,6 +46,7 @@ struct TodoDetailView: View {
                     
                     Button {
                         task.setDate(date.dateToString)
+                        isShownSheet.toggle()
                     } label: {
                         Text("저장하기")
                     }
