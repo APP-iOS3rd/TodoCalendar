@@ -17,6 +17,10 @@ struct CalendarModule: UIViewRepresentable {
     
     @Binding var selectedDate: Date
     @Query var tasks: [Task]
+    
+    init(selectedDate: Binding<Date> = .constant(Date())) {
+        self._selectedDate = selectedDate
+    }
 
     func updateEvent() -> [String] {
         var eventDays: [String] = []
@@ -50,6 +54,8 @@ struct CalendarModule: UIViewRepresentable {
         calendar.delegate = context.coordinator
         calendar.dataSource = context.coordinator
         
+        calendar.select(Date())
+        
         calendar.locale = Locale(identifier: "ko_KR")
         calendar.appearance.headerDateFormat = "YYYY년 MM월"
        // calendar.appearance.headerTitleAlignment = .left
@@ -62,7 +68,8 @@ struct CalendarModule: UIViewRepresentable {
         calendar.appearance.todayColor = .clear
         calendar.appearance.titleTodayColor = UIColor.accent
         calendar.appearance.selectionColor = UIColor.accent
-      
+        calendar.allowsMultipleSelection = false
+      //  calendar.swipeToChooseGesture.isEnabled = true
         calendar.appearance.eventDefaultColor = UIColor.green
         calendar.appearance.eventSelectionColor = UIColor.green
 
@@ -71,7 +78,6 @@ struct CalendarModule: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: FSCalendar, context: Context) {
-        
         uiView.reloadData()
     }
 
@@ -84,7 +90,7 @@ struct CalendarModule: UIViewRepresentable {
                        FSCalendarDataSource {
          
         var parent: CalendarModule
-        
+      
         init(_ parent: CalendarModule) {
             self.parent = parent
         }
@@ -93,15 +99,20 @@ struct CalendarModule: UIViewRepresentable {
                       didSelect date: Date,
                       at monthPosition: FSCalendarMonthPosition) {
             parent.selectedDate = date
+            
+            print("선택된 날짜: \(date.dateToString)")
+            if monthPosition == .next || monthPosition == .previous {
+                calendar.setCurrentPage(date, animated: true)
+            }
         }
-
-        func calendar(_ calendar: FSCalendar,
-                  imageFor date: Date) -> UIImage? {
+        
+//        func calendar(_ calendar: FSCalendar,
+//                  imageFor date: Date) -> UIImage? {
 //            if isWeekend(date: date) {
 //                return UIImage(systemName: "sparkles")
 //            }
-            return nil
-        }
+//            return nil
+//        }
 
         func calendar(_ calendar: FSCalendar,
                       numberOfEventsFor date: Date) -> Int {
@@ -113,18 +124,9 @@ struct CalendarModule: UIViewRepresentable {
         }
 
 //        func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
-//            if isWeekend(date: date) {
-//                return false
-//            }
-//            return true
+//            
+//            return false
 //        }
 
-//        func maximumDate(for calendar: FSCalendar) -> Date {
-//            Date.now.addingTimeInterval(86400 * 30)
-//        }
-//
-//        func minimumDate(for calendar: FSCalendar) -> Date {
-//            Date.now.addingTimeInterval(-86400 * 30)
-//        }
     }
 }

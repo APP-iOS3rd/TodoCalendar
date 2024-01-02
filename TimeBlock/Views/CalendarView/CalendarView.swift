@@ -64,7 +64,6 @@ struct CalendarView:View {
                 Spacer()
                 
             }
-            //.environmentObject(c)
             .environmentObject(CalendarModule.Coordinator(CalendarModule(selectedDate: $selectedDate)))
         }
         
