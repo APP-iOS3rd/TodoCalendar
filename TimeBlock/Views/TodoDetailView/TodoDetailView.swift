@@ -37,7 +37,6 @@ struct TodoDetailView: View {
                     Text(date.dateToString )
                         .font(.system(size: 18, weight: .semibold))
                         .onTapGesture {
-                            print("taping")
                             showDateSheet.toggle()
                         }
                         .sheet(isPresented: $showDateSheet) {
