@@ -43,7 +43,7 @@ struct SearchView: View {
             ForEach(groupedTasks.keys.sorted(), id: \.self) { date in
                 Section(header: Text(date)) {
                     ForEach(groupedTasks[date] ?? [], id: \.self) { task in
-                        VStack {
+                        VStack(alignment: .leading) {
                             Text(task.title)
                             Text(task.category?.name ?? "없음")
                         }
