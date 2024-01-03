@@ -11,7 +11,7 @@ import SwiftData
 struct TodoListView: View {
     @Binding var date: Date
     @Query var tasks: [Task]
-                                
+                                        
     var body: some View {
         NavigationStack {
             List{

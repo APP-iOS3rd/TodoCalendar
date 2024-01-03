@@ -2,17 +2,27 @@
 //  AddCategoryBtn.swift
 //  TimeBlock
 //
-//  Created by 이민호 on 1/2/24.
+//  Created by 이민호 on 1/3/24.
 //
 
 import SwiftUI
 
 struct AddCategoryBtn: View {
+    @State var isShowingAddCategoryView = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            isShowingAddCategoryView.toggle()
+        } label: {
+            HStack {
+                Spacer()
+                Image(systemName: "plus.circle")
+                    .font(.system(size: 30))
+            }
+            .padding()
+        }
+        .sheet(isPresented: self.$isShowingAddCategoryView) {
+            AddCategoryView()
+        }
     }
-}
-
-#Preview {
-    AddCategoryBtn()
 }
