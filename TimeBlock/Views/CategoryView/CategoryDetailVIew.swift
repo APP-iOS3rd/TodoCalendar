@@ -30,6 +30,7 @@ struct CategoryDetailView: View {
                                 .labelsHidden()
                                 .onChange(of: selectedColor) { newColor in
                                     category.color = newColor.colorToHex
+                             
                                 }
                         }
                     }

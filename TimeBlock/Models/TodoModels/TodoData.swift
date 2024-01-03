@@ -25,10 +25,4 @@ final class ToDoData: Identifiable {
         self.task = self.task.filter({$0 != task})
     }
     
-    func dateToString(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "ko_KR")
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: date)
-    }
 }

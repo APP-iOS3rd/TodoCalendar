@@ -42,7 +42,7 @@ struct CategoryView: View {
                 .onDelete(perform: deleteItem)
             }
             .sheet(item: $selectedItem, onDismiss: nil) { item in
-                if let index = items.firstIndex(where: { $0.id == item.id }) {
+                if items.firstIndex(where: { $0.id == item.id }) != nil {
                     CategoryDetailView(category: item, selectedColor: Color(hex: item.color))
                         .presentationDetents([.medium])
                         .presentationDragIndicator(.visible)
