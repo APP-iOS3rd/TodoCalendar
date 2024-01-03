@@ -13,6 +13,8 @@ struct SelectCategorySheetView: View {
     @Binding var selectedCategory: Category?
     
     var body: some View {
+        AddCategoryBtn()
+        
         List {
             ForEach(categories, id: \.self) { category in
                 SelectCategorySheetCell(selectedCategory: $selectedCategory, category: category)
