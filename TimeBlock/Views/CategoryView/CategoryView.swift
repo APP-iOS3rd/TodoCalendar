@@ -9,13 +9,13 @@ import SwiftData
 
 struct CategoryView: View {
     @Query(sort: [SortDescriptor(\Category.id)]) var items: [Category]
-    @Query var toDoData: [ToDoData]
     @State private var showingAddView = false
     @State private var selectedItem: Category?
     @State private var selectedCategory: Category?
     @State private var showingCategoryAddView = false
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.modelContext) var context
+    @Query var tasks: [Task]
     @Binding var task: Task
 
     var body: some View {
@@ -67,10 +67,8 @@ struct CategoryView: View {
     }
 
     func canDeleteCategory(_ category: Category) -> Bool {
-        !toDoData.contains { todo in
-            todo.task.contains { task in
-                task.category == category
-            }
+        !tasks.contains {task in
+            task.category == category
         }
     }
 
