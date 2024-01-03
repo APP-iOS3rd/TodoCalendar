@@ -19,21 +19,10 @@ struct AddTodoSaveBtn: View {
         Button {
             saveTodo()
         } label: {
-            HStack {
-                Image(systemName: "checkmark")
-                    .font(.system(size: 15))
-                    .foregroundColor(.white)
-                
-                Text("저장")
-                    .foregroundStyle(.white)
-                    .font(Font.system(size: 20, weight: .bold))
-            }
-            .minimumScaleFactor(0.5)
-            .padding()
+            SaveBtnContent(systemName: "checkmark", btnText: "저장")
+                .padding()
         }
-        .frame(height: 50)
-        .background(.black)
-        .cornerRadius(33)
+        .buttonStyle(SaveBtnStyle())
         .alert(isPresented: $showingAlert) {
                     Alert(title: Text("카테고리 미선택"), message: Text("카테고리를 선택해 주세요!"), dismissButton: .default(Text("확인")))
                 }

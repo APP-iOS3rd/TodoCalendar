@@ -23,7 +23,7 @@ struct SelectCategoryBtn: View {
         }
         .sheet(isPresented: $isShownSheet) {
             SelectCategorySheetView(selectedCategory: self.$selectedCategory)
-                .presentationDetents([.fraction(0.4)])
+            .presentationDetents([.fraction(0.4)])
         }
         .frame(height: 26, alignment: .center)
         .background(Color(hex: selectedCategory?.color ?? "a2a2d0"))

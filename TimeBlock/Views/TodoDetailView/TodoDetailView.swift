@@ -44,13 +44,12 @@ struct TodoDetailView: View {
                             DatePickerView(date: $date, showDateSheet: $showDateSheet)
                         }
                     
-                    Button {
-                        task.setDate(date.dateToString)
-                        isShownSheet.toggle()
-                    } label: {
-                        Text("저장하기")
-                    }
+                    Spacer()
                     
+                    HStack {
+                        Spacer()
+                        TodoSaveBtn(isShownSheet: self.$isShownSheet, task: self.$task, date: self.$date)
+                    }
                     Spacer()
                 }
                 Spacer()
