@@ -14,9 +14,10 @@ struct CalendarView:View {
     @Environment(\.modelContext) var context
     @Environment(\.dismiss) private var dismiss
     @State private var isModalPresented = false
-    @StateObject var calendarModule = CalendarModule()
+
     @State var isDataOn: Bool = false
-    
+    @State var selectedDate : Date = Date() 
+
     var body: some View {
         
         NavigationView {
@@ -52,18 +53,18 @@ struct CalendarView:View {
                 
                 VStack {
                     Spacer()
-                    CalendarModuleViewController()
+                    CalendarModule(selectedDate: $selectedDate)
                     Spacer()
                 }
                 
                 VStack {
                     Spacer()
-                    TodoListView(date: $calendarModule.selectedDate)
+                    TodoListView(date: $selectedDate)
                 }
                 Spacer()
                 
             }
-            .environmentObject(calendarModule)
+            .environmentObject(CalendarModule.Coordinator(CalendarModule(selectedDate: $selectedDate)))
         }
         
     }
