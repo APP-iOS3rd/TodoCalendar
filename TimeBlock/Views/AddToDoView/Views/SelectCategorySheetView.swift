@@ -14,17 +14,16 @@ struct SelectCategorySheetView: View {
     
     var body: some View {
         AddCategoryBtn()
-        
-        List {
-            ForEach(categories, id: \.self) { category in
-                SelectCategorySheetCell(selectedCategory: $selectedCategory, category: category)
-                    .listRowInsets(EdgeInsets())
-                    .listRowSeparator(.hidden)
-                    .onTapGesture {
-                        self.selectedCategory = category
-                    }
+            List {
+                ForEach(categories, id: \.self) { category in
+                    SelectCategorySheetCell(selectedCategory: $selectedCategory, category: category)
+                        .listRowInsets(EdgeInsets())
+                        .listRowSeparator(.hidden)
+                        .onTapGesture {
+                            self.selectedCategory = category
+                        }
+                }
             }
-        }
-        .listStyle(.plain)
+            .listStyle(.plain)
     }
 }

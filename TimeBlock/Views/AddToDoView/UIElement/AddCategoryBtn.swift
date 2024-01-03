@@ -16,8 +16,7 @@ struct AddCategoryBtn: View {
         } label: {
             HStack {
                 Spacer()
-                Image(systemName: "plus.circle")
-                    .font(.system(size: 30))
+                Image(systemName: "plus")
             }
             .padding()
         }
