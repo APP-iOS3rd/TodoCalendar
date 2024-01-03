@@ -20,6 +20,7 @@ struct CalendarModule: UIViewRepresentable {
     
     init(selectedDate: Binding<Date> = .constant(Date())) {
         self._selectedDate = selectedDate
+        
     }
 
     func updateEvent() -> [String] {
@@ -53,9 +54,7 @@ struct CalendarModule: UIViewRepresentable {
         
         calendar.delegate = context.coordinator
         calendar.dataSource = context.coordinator
-        
-        calendar.select(Date())
-        
+       
         calendar.locale = Locale(identifier: "ko_KR")
         calendar.appearance.headerDateFormat = "YYYY년 MM월"
        // calendar.appearance.headerTitleAlignment = .left
@@ -72,7 +71,9 @@ struct CalendarModule: UIViewRepresentable {
       //  calendar.swipeToChooseGesture.isEnabled = true
         calendar.appearance.eventDefaultColor = UIColor.green
         calendar.appearance.eventSelectionColor = UIColor.green
-
+        
+        
+        calendar.select(selectedDate)
         
         return calendar
     }
@@ -99,8 +100,8 @@ struct CalendarModule: UIViewRepresentable {
                       didSelect date: Date,
                       at monthPosition: FSCalendarMonthPosition) {
             parent.selectedDate = date
-            
-            print("선택된 날짜: \(date.dateToString)")
+            calendar.reloadData()
+           // print("선택된 날짜: \(date.dateToString)")
             if monthPosition == .next || monthPosition == .previous {
                 calendar.setCurrentPage(date, animated: true)
             }
@@ -122,11 +123,5 @@ struct CalendarModule: UIViewRepresentable {
             }
             return eventCount
         }
-
-//        func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
-//            
-//            return false
-//        }
-
     }
 }
