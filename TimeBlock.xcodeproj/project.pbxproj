@@ -234,13 +234,13 @@
 			isa = PBXGroup;
 			children = (
 				010309E42B4AC6250068C7FA /* TimeBlock.entitlements */,
-				01D7AD292B2ED91B0097410D /* Info.plist */,
 				01D7AD0E2B2C94B20097410D /* Resource */,
 				01D7AD0C2B2C94160097410D /* Source */,
 				01D7AD0B2B2C93270097410D /* Views */,
 				01CACF8A2B0B61E3008EBC42 /* Models */,
 				019CA2D92AF4BF89004598D9 /* TimeBlockApp.swift */,
 				010309E52B4AC6660068C7FA /* AppDelegate.swift */,
+				01D7AD292B2ED91B0097410D /* Info.plist */,
 				01030A1E2B4ACBFB0068C7FA /* GoogleService-Info.plist */,
 				019CA2DD2AF4BF8B004598D9 /* Assets.xcassets */,
 				019CA2DF2AF4BF8B004598D9 /* Preview Content */,
