@@ -5,6 +5,8 @@
 //  Created by 김건호 on 12/27/23.
 //
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 struct AddCategoryView: View {
     @State private var categoryName: String = ""
@@ -12,10 +14,15 @@ struct AddCategoryView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.modelContext) var context
     let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink, .gray, .brown, .cyan, .mint, .indigo, .teal, .green]
+    private let db: Firestore
     
+    init() {
+        self.db = Firestore.firestore()
+    }
+        
     var body: some View {
         NavigationView {
-            GeometryReader { geometry in                
+            GeometryReader { geometry in
                 Form {
                     Section(header: Text("카테고리 이름")) {
                         TextField("카테고리 이름을 입력해주세요", text: $categoryName)
@@ -29,8 +36,10 @@ struct AddCategoryView: View {
                     
                     Section {
                         Button("Add Category") {
-                            addNewCategory()
+                            let category = Category(name: categoryName, color: colorToHex(selectedColor))
+                            addNewCategory(category: category)
                             presentationMode.wrappedValue.dismiss()
+                            saveCategory(category: category)
                         }
                     }
                 }
@@ -39,10 +48,8 @@ struct AddCategoryView: View {
     }
     
     // 카테고리 추가
-    func addNewCategory() {
-        let colorString = colorToHex(selectedColor)
-        context.insert(Category(name: categoryName, color: colorString))
-        
+    func addNewCategory(category: Category) {
+        context.insert(category)
     }
     
     func colorToHex(_ color: Color) -> String {
@@ -59,6 +66,20 @@ struct AddCategoryView: View {
                                lroundf(Float(green) * 255),
                                lroundf(Float(blue) * 255))
         return hexString
+    }
+}
+
+extension AddCategoryView {
+    private func saveCategory(category: Category) {
+        let docData: [String : Any] = [
+            "id": "\(category.id)",
+            "name": category.name,
+            "color": category.color,
+            "isSelected": category.isSelected,
+        ]
+                
+        db.collection("categories").document("\(category.id)").setData(docData)
+        print("Category sucessfully saved!")
     }
 }
 
