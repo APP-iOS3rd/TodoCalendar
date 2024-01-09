@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SwiftData
+import Firebase
+import FirebaseFirestore
 
 struct AddTodoSaveBtn: View {
     @Environment(\.modelContext) var modelContext
@@ -14,7 +16,8 @@ struct AddTodoSaveBtn: View {
     @StateObject var addToDoVM: AddToDoVM
     @Binding var isModalPresented: Bool
     @State var showingAlert = false
-        
+    let db = Firestore.firestore()
+                
     var body: some View {
         Button {
             saveTodo()
@@ -36,9 +39,24 @@ extension AddTodoSaveBtn {
             let task = Task(title: addToDoVM.title,date: addToDoVM.date, category: category, completed: false, time: Time())
             
             modelContext.insert(task)
+            saveTask(task: task)
         } else {
             showingAlert = true
             return
         }
+    }
+    
+    func saveTask(task: Task) {
+        let category = db.collection("categories").document(String(describing: task.category?.id))
+        let docData: [String : Any] = [
+            "id": "\(task.id)",
+            "title": task.title,
+            "date": task.date ?? "",
+            "category": category,
+            "completed": task.completed
+        ]
+        
+        db.collection("task").document("\(task.id)").setData(docData)
+        print("Task sucessfully saved!")
     }
 }
