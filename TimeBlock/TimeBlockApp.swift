@@ -10,6 +10,9 @@ import SwiftUI
 
 @main
 struct TimeBlockApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     let container: ModelContainer = {
         let schema = Schema([Task.self, Category.self])
         let container = try! ModelContainer(for: schema, configurations: [])
